@@ -65,7 +65,7 @@
                     event.preventDefault();
                     var pid = $('#pid').val();
                     if (pid) {
-                        DataStorage.setItem('pid', pid);
+                        ACPToolKit.setCurrentParticipantId(pid);
                         window.location = 'pretest.html';
                     } else {
                         alert('Please enter a valid Participant ID (pid)!');
