@@ -1,0 +1,33 @@
+What must students be given?
+
+Should students be provided with the interface?
+
+Format of data output? Enforce CSV, but let them decide the necessary fields/cols and ordering of column,
+
+Code Components:
+- Autocomplete library
+- Code to show windows
+- Code to retrieve text from data files
+
+
+Setting Up is difficulty. Can do purely static.
+
+Conclusion:
+- Use pure JS
+- Work in teams
+- Code experimental interface
+
+- Students must implement the main bulk of the experiment themselves.
+- Students should already have the design. They should create something concrete.
+
+- Students start with empty index.html, for pre and post survey questionnaires.
+-
+
+Code Library should have:
+- AutoComPaste
+- Traditional Copy and Paste
+
+
+- Design it as a library to conduct autocompaste experiments
+- Show a demo
+- Tell them need pre and post questionnaire. Either they code themselves or use Google Forms.

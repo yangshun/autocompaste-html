@@ -24,30 +24,27 @@
             <div class="container">
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Welcome</a></li>
+                        <li><a href="index.html">Welcome</a></li>
                         <li><a href="pretest.html">Pre-Test</a></li>
-                        <li><a href="instructions.html">Instructions</a></li>
+                        <li class="active"><a href="instructions.html">Instructions</a></li>
                         <li><a href="experiment.html">Experiment</a></li>
                         <li><a href="posttest.html">Post-Test</a></li>
-                  </ul>
+                </ul>
             </div>
         </nav>
 
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
-                    <h1>Welcome!</h1>
+                    <h1>Instructions</h1>
                     <hr>
-                    <p>The startup interface provides the basic instructions to your participants, and also collect input from the participant/experimenter the participant ID so that you can generate the correct data log for a particular experiment session.</p>
+                    <p>Dear participant <span class="js-pid pid"></span>, please read the instructions before the experiment.
 
-                    <p>This is a template. Please write your participant number ID given by your experimenter:</p>
-                    <small>Participant IDs should only consist of alphanumeric characters.</small>
-                    <form class="form-inline" id="pid-form">
-                        <div class="form-group">
-                            <label for="pid">Particpant ID</label>
-                            <input name="pid" type="text" class="form-control" id="pid" placeholder="E.g. P01">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                    <p>There should always be an instruction before doing the actual evaluation of the interface.<p>
+                    <p>Enter your instructions to your participant here. Diagrams and screenshots will be very helpful!</p>
+
+                    <form class="form-inline">
+                        <button type="submit" class="btn btn-primary">Next</button>
                     </form>
                 </div>
             </div>
@@ -61,15 +58,9 @@
         
         <script>
             $(function () {
-                $('#pid-form').submit(function (event) {
+                $('form').submit(function (event) {
                     event.preventDefault();
-                    var pid = $('#pid').val();
-                    if (pid) {
-                        DataStorage.setItem('pid', pid);
-                        window.location = 'pretest.html';
-                    } else {
-                        alert('Please enter a valid Participant ID (pid)!');
-                    }
+                    window.location = 'experiment.html';
                 });
             });
         </script>
