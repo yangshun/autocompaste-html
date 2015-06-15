@@ -25,24 +25,25 @@
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="index.html">Welcome</a></li>
-                        <li class="active"><a href="pretest.html">Pre-Test</a></li>
+                        <li class="active"><a href="questionnaire-pre.html">Pre Questionnaire</a></li>
                         <li><a href="instructions.html">Instructions</a></li>
                         <li><a href="experiment.html">Experiment</a></li>
-                        <li><a href="posttest.html">Post-Test</a></li>
-                  </ul>
+                        <li><a href="questionnaire-post.html">Post Questionnaire</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
 
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
-                    <h1>Pre-Test Information</h1>
+                    <h1>Pre-Experiment Questionnaire</h1>
                     <hr>
-                    <p>This part of the interface collects whatever pre-test information (ie demographic and all) that you need.</p>
+                    <p>This part of the interface collects whatever pre-experiment information. Please come up with a basic questionnaire to help you to gather participant information. The purpose of this questionnaire is to report the participant data and convince readers that you have picked an appropriate target user group and the result has certain generalizability.</p>
 
                     <p>Please put all information needed for participant: <span class="js-pid pid"></span></p>
 
-                    <form id="pretest-form">
+                    <form id="pre-expt-form">
                         <div class="form-group">
                             <label for="q1">Question 1 - Text</label>
                             <input type="text" class="form-control" id="q1" name="q1" placeholder="Enter answer">
@@ -51,7 +52,7 @@
                             <label for="q2">Question 2 - Radio</label>
                             <div class="radio">
                               <label>
-                                <input type="radio" name="q2" id="optionsRadios1" value="radio1" checked>
+                                <input type="radio" name="q2" id="optionsRadios1" value="radio1">
                                 Radio response 1
                               </label>
                             </div>
@@ -89,9 +90,9 @@
                         </div>
                         <div class="form-group">
                             <label for="q5">Question 5 - Textarea</label>
-                            <input type="text" class="form-control" id="q5" name="q5" placeholder="Enter response">
+                            <textarea class="form-control" id="q5" name="q5" placeholder="Enter response"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
                     </form>
                 </div>
             </div>
@@ -105,16 +106,12 @@
         
         <script>
             $(function () {
-                // Populate interface with current participant's ID
-                $('.js-pid').text(ACPToolKit.getCurrentParticipantId());
-
-                $('#pretest-form').submit(function (event) {
+                $('#pre-expt-form').submit(function (event) {
                     event.preventDefault();
-                    var responses = $(this).serializeArray();
+                    var formResponses = $(this).serializeArray();
                     // Do your own form validation here.
-                    console.log(responses);
+                    ACPToolKit.generateFormInCSV(formResponses, 'pre');
                     window.location = 'experiment.html';
-                    
                 });
             });
         </script>

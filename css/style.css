@@ -1,3 +1,7 @@
+body {
+  margin-bottom: 40px;
+}
+
 .pid {
   color: red;
   font-weight: bold;

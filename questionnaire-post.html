@@ -25,24 +25,25 @@
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="index.html">Welcome</a></li>
-                        <li><a href="pretest.html">Pre-Test</a></li>
+                        <li><a href="questionnaire-pre.html">Pre Questionnaire</a></li>
                         <li><a href="instructions.html">Instructions</a></li>
                         <li><a href="experiment.html">Experiment</a></li>
-                        <li class="active"><a href="posttest.html">Post-Test</a></li>
-                  </ul>
+                        <li class="active"><a href="questionnaire-post.html">Post Questionnaire</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
 
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
-                    <h1>Post-Test Information</h1>
+                    <h1>Post-Experiment Questionnaire</h1>
                     <hr>
-                    <p>This part of the interface collects whatever post-test information (ie demographic and all) that you need.</p>
+                    <p>This part of the interface collects whatever post-experiment information. After the experiment, you want to collect more qualitative and quantitative feedback about the tested techniques. Some of the typical questions include, personal preferences, any difficulties participants experienced in the experiment, and areas of improvement. Please design a basic post-experimental questionnaire (no more than 10 questions).</p>
 
                     <p>Current participant: <span class="js-pid pid"></span></p>
 
-                    <form id="pretest-form">
+                    <form id="post-expt-form">
                         <div class="form-group">
                             <label for="q1">Question 1 - Text</label>
                             <input type="text" class="form-control" id="q1" name="q1" placeholder="Enter answer">
@@ -51,7 +52,7 @@
                             <label for="q2">Question 2 - Radio</label>
                             <div class="radio">
                               <label>
-                                <input type="radio" name="q2" id="optionsRadios1" value="radio1" checked>
+                                <input type="radio" name="q2" id="optionsRadios1" value="radio1">
                                 Radio response 1
                               </label>
                             </div>
@@ -89,9 +90,9 @@
                         </div>
                         <div class="form-group">
                             <label for="q5">Question 5 - Textarea</label>
-                            <input type="text" class="form-control" id="q5" name="q5" placeholder="Enter response">
+                            <textarea class="form-control" id="q5" name="q5" placeholder="Enter response"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
                     </form>
                 </div>
             </div>
@@ -105,16 +106,12 @@
         
         <script>
             $(function () {
-                // Populate interface with current participant's ID
-                $('.js-pid').text(ACPToolKit.getCurrentParticipantId());
-
-                $('#pretest-form').submit(function (event) {
+                $('#post-expt-form').submit(function (event) {
                     event.preventDefault();
-                    var responses = $(this).serializeArray();
+                    var formResponses = $(this).serializeArray();
                     // Do your own form validation here.
-                    console.log(responses);
-                    window.location = 'experiment.html';
-                    
+                    ACPToolKit.generateFormInCSV(formResponses, 'post');
+                    alert('Thank you for your participation!');
                 });
             });
         </script>
