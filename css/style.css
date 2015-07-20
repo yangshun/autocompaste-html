@@ -1,8 +1,121 @@
 body {
+  font-family: "Open Sans", sans-serif;
   margin-bottom: 40px;
 }
 
 .pid {
   color: red;
   font-weight: bold;
+}
+
+.spacer {
+  height: 20px;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+/**
+ * Main ACP styles
+ */
+
+#autocompaste {
+  background-color: #ccc;
+  margin: 0;
+  padding: 0;
+}
+
+#autocompaste-display {
+  width: 100%;
+  min-height: 100%;
+}
+
+#autocompaste-display > .wm-window {
+  position: absolute;
+  padding: 0;
+  width: auto;
+  -webkit-filter: brightness(95%);
+}
+
+#autocompaste-display > .wm-window .modal-header {
+  cursor: move;
+  padding: 5px 15px;
+}
+
+#autocompaste-display > .wm-window .modal-header h4 {
+  color: #999999;
+}
+
+#autocompaste-display > .wm-window .modal-body {
+  padding: 5px;
+  overflow-y: auto;
+}
+
+#autocompaste-display > .wm-window .modal-body .highlighted {
+  background-color: yellow;
+}
+
+#autocompaste-display.dragging-active > .wm-window .modal-header,
+#autocompaste-display.dragging-active > .wm-window .modal-body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#autocompaste-completion {
+  position: absolute;
+  transition: all 0.2s;
+  display: none;
+}
+
+#autocompaste-completion-list {
+  height: auto;
+  width: auto;
+  display: block;
+  overflow-y: auto;
+}
+
+#autocompaste-completion-list li a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+#autocompaste-completion-list li a:hover {
+  color: #333;
+  background-color: #fff;
+}
+
+#autocompaste-completion-list li a.focused {
+  color: #fff;
+  background-color: #428bca;
+}
+
+/* Focused window styles */
+#autocompaste-display > .wm-window-focused {
+  -webkit-filter: brightness(100%);
+  transition: -webkit-filter 0.5s;
+}
+
+#autocompaste-display > .wm-window-focused .modal-header h4 {
+  color: #333333;
+}
+
+/* Error overlay styles */
+#error-overlay {
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  display: none;
+}
+
+#error-overlay .modal-dialog {
+  margin-top: 100px;
 }

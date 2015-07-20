@@ -10,11 +10,11 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
+        <!-- <link rel="stylesheet" href="css/normalize.css"> -->
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/style.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <!-- // <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -61,34 +61,42 @@
                     </table>
                     <p>Please copy-paste the following <span class="js-expt-granularity">phrase</span> using <span class="js-expt-technique">ACP</span> from one of the opened windows.</p>
                     <div class="alert alert-info">This is a long stimuli!</div>
-                    <button class="btn btn-primary btn-lg">Next Task</button>
+                    <button class="btn btn-primary btn-lg" onclick="nextTask()">Next Task</button>
                 </div>
-                <div class="col-md-9">
-                    <h1>Instructions</h1>
-                    <hr>
-                    <p>Dear participant <span class="js-pid pid"></span>, please read the instructions before the experiment.
-
-                    <p>There should always be an instruction before doing the actual evaluation of the interface.<p>
-                    <p>Enter your instructions to your participant here. Diagrams and screenshots will be very helpful!</p>
-
-                    <form class="form-inline">
-                        <button type="submit" class="btn btn-primary btn-lg">Next</button>
-                    </form>
+                <div id="autocompaste" class="col-sm-9">
+                    <div id="autocompaste-display"></div>
                 </div>
             </div>
         </div>
 
         <script src="js/vendor/jquery-1.11.2.min.js"></script>
         <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/window_manager.js"></script>
+        <script src="js/autocompaste/engine.js"></script>
+        <script src="js/autocompaste/interface.js"></script>
+        <script src="js/autocompaste/editor.js"></script>
+        <script src="js/autocompaste/autocompaste.js"></script>
         <script src="js/DataStorage.js"></script>
         <script src="js/ACPToolKit.js"></script>
-        <script src="js/main.js"></script>
         
         <script>
+
+            function nextTask () {
+                ACPToolKit.showWindows({
+                    technique: 'TRADITIONAL',
+                    granularity: 'sentence',
+                    data_file: 'data/texts_2.json',
+                    stimuli: 'What is absorption?'
+                });
+            }
+
             $(function () {
-                $('form').submit(function (event) {
-                    event.preventDefault();
-                    window.location = 'experiment.html';
+                ACPToolKit.showWindows({
+                    technique: 'ACP',
+                    granularity: 'paragraph',
+                    data_file: 'data/texts_4.json',
+                    stimuli: 'What is absorption? Loss or dissipation of energy as it travels through a medium.'
                 });
             });
         </script>

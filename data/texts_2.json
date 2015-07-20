@@ -1,0 +1,10 @@
+[
+    {
+        "title": "Data 1",
+        "url": "data/articles/data1.txt"
+    },
+    {
+        "title": "Data 2",
+        "url": "data/articles/data2.txt"
+    }
+]

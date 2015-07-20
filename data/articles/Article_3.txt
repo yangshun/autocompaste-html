@@ -1,0 +1,17 @@
+What is ampere? Unit of electrical current. 12 is the number
+
+What is amplifier? A circuit that increases the voltage, current, or power of a signal.
+
+What is amplitude? Magnitude or size of a signal voltage or current.
+
+What is analog? Information represented as continuously varying voltage or current rather than in discrete levels as opposed to digital data varying between two discrete levels.
+
+What is anode? The positive electrode or terminal of a device. The "P" material of a diode.
+
+What is antenna, receiving? A device that converts a radiated electromagnetic wave into an electrical wave.
+
+What is apparent power? Power attained in an AC circuit as a product of effective voltage and current which reach their peak at different times.
+
+What is armature? The rotating or moving component of a magnetic circuit.
+
+What is armstrong oscillator? An oscillator that uses an isolation transformer to achieve positive feedback from output to input.
