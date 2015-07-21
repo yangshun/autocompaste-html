@@ -645,11 +645,14 @@ var WindowManager = (function () {
       // Figure out which windows are damaged and re-render.
       for (var i = 0; i < privates.damaged_windows.length; i++) {
         var window_name = privates.damaged_windows[i];
-        var x = privates.windows[window_name].x;
-        var y = privates.windows[window_name].y;
-        $(privates.windows[window_name].struct).css(
-          "transform", "translate(" + x + "px, " + y + "px)"
-        );
+        var wd = privates.windows[window_name];
+        if (wd) {
+          var x = wd.x;
+          var y = wd.y;
+          $(privates.windows[window_name].struct).css(
+            "transform", "translate(" + x + "px, " + y + "px)"
+          );
+        }
       }
     };
 

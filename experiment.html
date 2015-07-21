@@ -60,7 +60,7 @@
                         </tbody>
                     </table>
                     <p>Please copy-paste the following <span class="js-expt-granularity">phrase</span> using <span class="js-expt-technique">ACP</span> from one of the opened windows.</p>
-                    <div class="alert alert-info">This is a long stimuli!</div>
+                    <div class="alert alert-info js-expt-stimuli">This is a long stimuli!</div>
                     <button class="btn btn-primary btn-lg" onclick="nextTask()">Next Task</button>
                 </div>
                 <div id="autocompaste" class="col-sm-9">
@@ -87,7 +87,10 @@
                     technique: 'TRADITIONAL',
                     granularity: 'sentence',
                     data_file: 'data/texts_2.json',
-                    stimuli: 'What is absorption?'
+                    stimuli: 'What is absorption?',
+                    done: function (time) {
+                        console.log(time);
+                    }
                 });
             }
 
@@ -96,7 +99,10 @@
                     technique: 'ACP',
                     granularity: 'paragraph',
                     data_file: 'data/texts_4.json',
-                    stimuli: 'What is absorption? Loss or dissipation of energy as it travels through a medium.'
+                    stimuli: 'What is absorption? Loss or dissipation of energy as it travels through a medium.',
+                    done: function (time) {
+                        console.log(time);
+                    }
                 });
             });
         </script>

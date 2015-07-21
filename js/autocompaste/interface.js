@@ -36,26 +36,24 @@ AutoComPaste.Interface = (function () {
   function Interface (wm, engine, texts_json) {
     /** Internal functions */
     this._showError = function _showerror() {
-      document.getElementById ('error-overlay').style.display = 'block';
+      document.getElementById('error-overlay').style.display = 'block';
     };
 
     this._fetchTexts = function _fetchTexts () {
-      jQuery.ajax (privates.texts_json, {
+      $.ajax (privates.texts_json, {
         dataType: 'json',
         error: this._fetchTextsError,
         success: this._fetchTextsSuccess
       });
     };
 
-    this._fetchTextsError = function _fetchTextserror(jqxhr, text_status,
-        error_thrown) {
+    this._fetchTextsError = function _fetchTextserror(jqxhr, text_status, error_thrown) {
       iface._showerror();
       console.error("Interface._fetchTextsError: Unable to parse text sources: " + text_status);
       console.error("Interface._fetchTextsError: Additional info: " + error_thrown);
     };
 
-    this._fetchTextsSuccess = function _fetchTextsSuccess (data, text_status,
-        jqxhr) {
+    this._fetchTextsSuccess = function _fetchTextsSuccess (data, text_status, jqxhr) {
       // Check the sanity of data.
       if (!Array.isArray (data)) {
         iface._showerror();
@@ -78,20 +76,20 @@ AutoComPaste.Interface = (function () {
         return;
       }
 
-      if (!text_source.hasOwnProperty ('title')) {
+      if (!text_source.hasOwnProperty('title')) {
         console.error("Interface._fetchText: Source must have a title. Additional info: ");
         console.error(text_source);
         return;
       }
 
-      if (!text_source.hasOwnProperty ('url')) {
+      if (!text_source.hasOwnProperty('url')) {
         console.error("Interface._fetchText: Source must have a url. Additional info: ");
         console.error(text_source);
         return;
       }
 
       var iface = this;
-      jQuery.ajax (text_source.url, {
+      $.ajax(text_source.url, {
         complete: function (jqxhr, text_status) {
           return iface._fetchTextComplete (jqxhr, text_status, iface);
         },
@@ -103,8 +101,7 @@ AutoComPaste.Interface = (function () {
       });
     };
 
-    this._fetchTextComplete = function _fetchTextComplete (jqxhr, text_status,
-        iface) {
+    this._fetchTextComplete = function _fetchTextComplete (jqxhr, text_status, iface) {
       privates.texts_returned++;
       if (privates.texts_returned == privates.texts_available) {
         // At this point, we have all the texts already.
@@ -114,95 +111,100 @@ AutoComPaste.Interface = (function () {
         console.log("Interface._fetchTextComplete: Finished fetching all texts");
 
         for (var text_title in privates.texts) {
-          if (privates.texts.hasOwnProperty (text_title)) {
+          if (privates.texts.hasOwnProperty(text_title)) {
             console.log("Interface._fetchTextComplete: Creating window for text \"" + text_title + "\"");
-            iface._createWindowForText (text_title);
-
-            console.log("Interface._fetchTextComplete: Adding text \"" + text_title + "\" to ACP engine");
-            privates.engine.addToIndex (text_title, privates.texts[text_title]);
+            iface._createWindowForText(text_title);
           }
         }
 
         // Create a text editor window.
-        var acp_textarea = $(document.createElement ('textarea'))
-            .addClass ('autocompaste-textarea')
-            .attr ({
-              rows: 10,
-              cols: 40
-            })
-            .autocompaste (privates.engine);
+        var acp_textarea = $(document.createElement('textarea'))
+                            .addClass('autocompaste-textarea')
+                            .attr({
+                              rows: 10,
+                              cols: 40
+                            });
 
-        privates.wm.createWindow ("text_editor");
-        privates.wm.setWindowTitle ("text_editor", "Text Editor");
-        privates.wm.setWindowContent ('text_editor', acp_textarea);
-        acp_textarea.focus ();
+        //  For ACP mode, engine is passed into the interface. 
+        //  Initialize the interface with the engine.
+        if (privates.engine) {
+          for (var text_title in privates.texts) {
+            if (privates.texts.hasOwnProperty(text_title)) {
+              console.log("Interface._fetchTextComplete: Adding text \"" + text_title + "\" to ACP engine");
+              privates.engine.addToIndex(text_title, privates.texts[text_title]);
+            }
+          }
+          acp_textarea.autocompaste(privates.engine);
+        }
+
+        privates.wm.createWindow("text_editor");
+        privates.wm.setWindowTitle("text_editor", "Text Editor");
+        privates.wm.setWindowContent('text_editor', acp_textarea);
+        acp_textarea.focus();
 
         // Dispatch an event.
-        iface.dispatchEvent ('loaded');
+        iface.dispatchEvent('loaded');
       }
     };
 
-    this._fetchTextError = function _fetchTexterror(jqxhr, text_status,
-        error_thrown) {
+    this._fetchTextError = function _fetchTexterror (jqxhr, text_status, error_thrown) {
       iface._showerror();
       console.error("Interface._fetchTextError: Unable to retrieve source: " + this.url);
     };
 
-    this._fetchTextSuccess = function _fetchTextsSuccess (data, text_status, 
-        jqxhr, text_source) {
+    this._fetchTextSuccess = function _fetchTextsSuccess (data, text_status, jqxhr, text_source) {
       console.log("Interface._fetchTextSuccess: Retrieved source: " + text_source.url);
       privates.texts[text_source.title] = data;
     };
 
     this._createWindowForText = function _createWindowForText (text_title) {
-      // TODO: fix hardcoded window sizes
-      privates.wm.createWindow (text_title, 500, 400);
-      privates.wm.setWindowTitle (text_title, text_title);
-      privates.wm.setWindowContent (text_title,
-          $(document.createElement ('pre'))
-            .append (privates.texts[text_title])
-            .css ('white-space', 'pre-word')
+      
+      privates.wm.createWindow(text_title, 500, 400);
+      privates.wm.setWindowTitle(text_title, text_title);
+      privates.wm.setWindowContent(text_title,
+        $(document.createElement('pre'))
+          .append(privates.texts[text_title])
+          .css('white-space', 'pre-word')
       );
 
       // Position the window randomly.
       //
       // safety_bounds ensures that the window is at least some pixels within 
       // the boundaries of the display.
-      // TODO: Random numbers don't seem to be well generated here.
-      var safety_bounds = 200;
-      privates.wm.moveWindowTo (text_title,
-          Math.random () * (privates.wm.getDisplayWidth () - safety_bounds) + (safety_bounds / 2),
-          Math.random () * (privates.wm.getDisplayHeight () - safety_bounds) + (safety_bounds / 2)
+      var safety_bounds = 50;
+      privates.wm.moveWindowTo(text_title,
+        Math.random() * (privates.wm.getDisplayWidth() - safety_bounds) + (safety_bounds / 2),
+        Math.random() * (privates.wm.getDisplayHeight() - safety_bounds) + (safety_bounds / 2)
       );
     };
 
     this.addEventListener = function addEventListener (name, handler) {
-      if (privates.events.hasOwnProperty (name)) {
-        privates.events[name].push (handler);
+      if (privates.events.hasOwnProperty(name)) {
+        privates.events[name].push(handler);
       } else {
         privates.events[name] = [handler];
       }
     };
 
     this.removeEventListener = function removeEventListener (name, handler) {
-      if (!privates.events.hasOwnProperty (name)) {
+      if (!privates.events.hasOwnProperty(name)) {
         return;
       }
 
-      var index = privates.events[name].indexOf (handler);
+      var index = privates.events[name].indexOf(handler);
       if (index != -1) {
-        privates.events[name].splice (index, 1);
+        privates.events[name].splice(index, 1);
       }
     };
 
     this.dispatchEvent = function dispatchEvent (name, event_data) {
-      if (!privates.events.hasOwnProperty (name)) {
+      if (!privates.events.hasOwnProperty(name)) {
         return;
       }
 
       var evs = privates.events[name];
       for (var i = 0; i < evs.length; i++) {
-        evs[i].apply (null, [event_data]);
+        evs[i].apply(null, [event_data]);
       }
     };
    
@@ -214,16 +216,6 @@ AutoComPaste.Interface = (function () {
 
     if (typeof wm != 'object' && !(wm instanceof AutoComPaste.WindowManager)) {
       console.error("Interface: wm must be of type AutoComPaste.WindowManager");
-      return;
-    }
-
-    if (engine == undefined) {
-      console.error("Interface: engine must be given");
-      return;
-    }
-
-    if (typeof engine != 'object' && !(engine instanceof AutoComPaste.Engine)) {
-      console.error("Interface: engine must be of type AutoComPaste.Engine");
       return;
     }
 

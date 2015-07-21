@@ -72,11 +72,30 @@ var ACPToolKit = (function () {
 
         var data_file = options.data_file;
         var stimuli = options.stimuli;
+
+        $('.js-expt-technique').text(options.technique);
+        $('.js-expt-granularity').text(options.granularity);
+        $('.js-expt-stimuli').text(options.stimuli);
         
+        // Clean up DOM
         wm.destroyAllWindows();
-        var engine = new AutoComPaste.Engine();
+        $('#autocompaste-completion').remove();
+        $('#autocompaste-measure-num-wrapped-lines').remove();
+        $('#autocompaste-measure-get-single-line-height').remove();
+        $('#autocompaste-measure-text-length-in-pixels').remove();
+        $('#autocompaste-completion').remove();
+
+        switch (options.technique) {
+            case 'TRADITIONAL':
+                var engine = null;
+                break;
+            case 'ACP':
+            default:
+                var engine = new AutoComPaste.Engine();        
+                break;
+        }
+        
         var iface = new AutoComPaste.Interface(wm, engine, data_file);
-        var start = new Date().getTime();
 
         // Highlight the relevant text.
         iface.addEventListener('loaded', function () {
@@ -95,17 +114,8 @@ var ACPToolKit = (function () {
                     "<span class=\"highlighted\">" + value + "</span>");
                 });
 
-              $(win).find('pre')
-                .empty()
-                .append(content);
+              $(win).find('pre').empty().append(content);
             }
-        });
-
-        // Measure the time and submit input strings.
-        $('#experiment-form').submit(function (submit_event) {
-            var end = new Date().getTime() - start;
-            $('#experiment-raw').val($('#autocompaste-display .autocompaste-textarea').val());
-            $('#experiment-time').val(end);
         });
 
         // Window switching capability through shortcuts.
@@ -115,10 +125,12 @@ var ACPToolKit = (function () {
         var switcher_list_pause_update = false;
 
         wm.addEventListener('windowcreated', function (created_event) {
+            console.log('wm windowcreated');
             switcher_list.push(created_event.name);
         });
 
         wm.addEventListener('windowfocus', function (focus_event) {
+            console.log('wm windowfocus');
             if (switcher_list_pause_update) {
                 return;
             }
@@ -131,30 +143,7 @@ var ACPToolKit = (function () {
             switcher_list.push(focus_event.name);
         });
 
-        $(window).keydown(function (keydown_event) {
-            if (keydown_event.altKey && keydown_event.keyCode == 81) {
-                switcher_list_pause_update = true;
 
-                switcher_list_item--;
-                if (switcher_list_item < -1) {
-                    switcher_list_item = switcher_list.length - 2;
-                }
-          
-                if (switcher_list_item == -1) {
-                    switcher_list_item = switcher_list.length - 1;
-                }
-
-                wm.setFocus(switcher_list[switcher_list_item]);
-            }
-        });
-      
-        $(window).keyup(function (keyup_event) {
-            if (keyup_event.keyCode == 18) {
-                switcher_list_pause_update = false;
-                wm.setFocus (switcher_list[switcher_list_item]);
-                switcher_list_item = -1;
-            }
-        });
     }
 
     return module;

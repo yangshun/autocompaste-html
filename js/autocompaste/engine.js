@@ -56,11 +56,11 @@ AutoComPaste.Engine = (function () {
 
       // Sentences are broken down using sentence delimiters such as ".", "?"
       // and "!". There may be more that we have missed out.
-      var sentences = text.split (/(\r|\n|\?|\.|!)/)
-        .filter (function (sentence) {
-          return !/\r|\n/.test (sentence);
+      var sentences = text.split(/(\r|\n|\?|\.|!)/)
+        .filter(function (sentence) {
+          return !/\r|\n/.test(sentence);
         })
-        .filter (function (sentence) {
+        .filter(function (sentence) {
           return sentence;
         });
 
@@ -69,7 +69,7 @@ AutoComPaste.Engine = (function () {
       // those in.
       var real_sentence_idx = -1;
       for (var i = 0; i < sentences.length; i++) {
-        if (!/\?|\.|!/.test (sentences[i])) {
+        if (!/\?|\.|!/.test(sentences[i])) {
           real_sentence_idx = i;
         }
 
@@ -77,16 +77,16 @@ AutoComPaste.Engine = (function () {
           if (real_sentence_idx != i) {
             // Merge with previous real sentence.
             sentences[real_sentence_idx] =
-              sentences[real_sentence_idx].concat (sentences[i]);
+              sentences[real_sentence_idx].concat(sentences[i]);
             sentences[i] = "";
           }
         }
       }
 
       // Remove empty elements.
-      sentences = sentences.filter (function (sentence) {
+      sentences = sentences.filter(function (sentence) {
         return sentence;
-      }).map (function (sentence) {
+      }).map(function (sentence) {
         return sentence.trim();
       });
 
@@ -123,14 +123,14 @@ AutoComPaste.Engine = (function () {
 
           if (search_result != -1) {
             var result = {
-              "sentence": sentence,
-              "start": search_result,
-              "end": search_result + query.length,
-              "id": id,
-              "index": i
+              sentence: sentence,
+              start: search_result,
+              end: search_result + query.length,
+              id: id,
+              index: i
             };
 
-            results.push (result);
+            results.push(result);
           }
         }
       }
@@ -140,7 +140,6 @@ AutoComPaste.Engine = (function () {
 
     /**
      * Obtains a specific sentence from the index.
-     * TODO: Do some checking
      *
      * @param {String} id
      * @param {Number} index
@@ -150,28 +149,28 @@ AutoComPaste.Engine = (function () {
     this.getSentenceFromIndex = function (id, index) {
       // Check the ID.
       if (id == undefined) {
-        console.error ("Engine.getSentenceFromIndex: id must be given");
+        console.error("Engine.getSentenceFromIndex: id must be given");
         return;
       }
 
       if (typeof id != 'string' && !(id instanceof String)) {
-        console.error ("Engine.getSentenceFromIndex: id must be a string");
+        console.error("Engine.getSentenceFromIndex: id must be a string");
         return;
       }
 
       // Check the index.
-      if (isNaN (index)) {
-        console.error ("Engine.getSentenceFromIndex: index must be a number");
+      if (isNaN(index)) {
+        console.error("Engine.getSentenceFromIndex: index must be a number");
         return;
       }
 
       if (index < 0) {
-        console.error ("Engine.getSentenceFromIndex: index cannot be negative");
+        console.error("Engine.getSentenceFromIndex: index cannot be negative");
         return;
       }
      
       // ID does not exist.
-      if (!privates.sentences.hasOwnProperty (id)) {
+      if (!privates.sentences.hasOwnProperty(id)) {
         return undefined;
       }
       var sentences = privates.sentences[id];
@@ -182,9 +181,9 @@ AutoComPaste.Engine = (function () {
       }
 
       return {
-        "sentence": sentences[index],
-        "id": id,
-        "index": index
+        sentence: sentences[index],
+        id: id,
+        index: index
       };
     };
 
@@ -199,5 +198,3 @@ AutoComPaste.Engine = (function () {
   return Engine;
 
 }) ();
-
-/* vim: set sw=2 ts=2 et: */

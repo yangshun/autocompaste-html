@@ -1,6 +1,5 @@
 /* ========================================================================
  * An implementation of AutoComPaste in HTML
- * http://github.com/yjwong/autocompaste.git
  * ========================================================================
  * Copyright 2015 Wong Yong Jie and Tay Yang Shun
  *
@@ -20,9 +19,9 @@
 (function () {
   /**
    * AutoComPaste jQuery Plugin
-   * To use this plugin, run $('#my-text-field').autocompaste ().
+   * To use this plugin, run $('#my-text-field').autocompaste().
    */
-  jQuery.fn.autocompaste = function (engine) {
+  $.fn.autocompaste = function (engine) {
     var editor = new AutoComPaste.Editor(this, engine);
     return this;
   }
