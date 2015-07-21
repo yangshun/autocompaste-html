@@ -55,13 +55,13 @@
                             </tr>
                             <tr>
                                 <td>Trial</td>
-                                <td>1 / 3</td>
+                                <td><span class="js-expt-current-trial"></span> / <span class="js-expt-num-trials"></span></td>
                             </tr>
                         </tbody>
                     </table>
-                    <p>Please copy-paste the following <span class="js-expt-granularity">phrase</span> using <span class="js-expt-technique">ACP</span> from one of the opened windows.</p>
+                    <p>Please copy-paste the following <span class="js-expt-granularity">phrase</span> using the <span class="js-expt-technique">AUTOCOMPASTE</span> technique from one of the open windows.</p>
                     <div class="alert alert-info js-expt-stimuli">This is a long stimuli!</div>
-                    <button class="btn btn-primary btn-lg" onclick="nextTask()">Next Task</button>
+                    <button class="btn btn-primary btn-lg" onclick="next()">Next Task</button>
                 </div>
                 <div id="autocompaste" class="col-sm-9">
                     <div id="autocompaste-display"></div>
@@ -82,29 +82,57 @@
         
         <script>
 
-            function nextTask () {
-                ACPToolKit.showWindows({
-                    technique: 'TRADITIONAL',
-                    granularity: 'sentence',
-                    data_file: 'data/texts_2.json',
-                    stimuli: 'What is absorption?',
-                    done: function (data) {
-                        console.log(data);
-                    }
-                });
-            }
+            var trialsData;
+            var currentTrial;
+            var totalNumberOfTrials;
+            var headers = ['Participant id', 'Technique', 'Granularity', 
+                            'Trial no', 'Stimuli', 'User Response', 'Trial Start Time',
+                            'Trial End Time', 'Trial Time', 'Accuracy'];
+            var trialData = [];
+            var pid;
 
-            $(function () {
-                ACPToolKit.showWindows({
-                    technique: 'ACP',
-                    granularity: 'paragraph',
-                    data_file: 'data/texts_4.json',
-                    stimuli: 'What is absorption? Loss or dissipation of energy as it travels through a medium.',
-                    done: function (data) {
-                        console.log(data);
-                    }
-                });
-            });
+            function next () {
+                if (currentTrial !== 0) {
+                    var trialResult = ACPToolKit.getCurrentTrialState();
+                    
+                    var technique = trialResult.technique;
+                    var granularity = trialResult.granularity;
+                    var trialNum = currentTrial;
+                    var stimuli = trialResult.stimuli;
+                    var userResponse = trialResult.user_response;
+                    var trialStartTime = trialResult.start_time;
+                    var trialEndTime = trialResult.end_time;
+                    var trialDuration = trialResult.duration;
+                    var accuracy = stimuli === userResponse ? 1 : 0;
+
+                    var row = [pid, technique, granularity, trialNum,
+                                stimuli, userResponse, trialStartTime,
+                                trialEndTime, trialDuration, accuracy];
+                    trialData.push(row);
+                }
+
+                if (currentTrial < totalNumberOfTrials) {
+                    ACPToolKit.presentTrial(trialsData[currentTrial]);
+                } else {
+                    // Last trial completed
+                    ACPToolKit.downloadTrialResults(trialData);
+                    window.location = 'questionnaire-post.html';
+                }
+                currentTrial += 1;
+                $('.js-expt-current-trial').text(currentTrial);
+            }  
+
+            $(document).ready(function () {
+                $.get('data/experiments.json', function (data) {
+                    trialsData = data.experiments;                    
+                    currentTrial = 0;
+                    totalNumberOfTrials = trialsData.length;
+                    $('.js-expt-num-trials').text(totalNumberOfTrials);
+                    trialData.push(headers);
+                    next();
+                    pid = ACPToolKit.getCurrentParticipantId();
+                })
+            });            
         </script>
     </body>
 </html>

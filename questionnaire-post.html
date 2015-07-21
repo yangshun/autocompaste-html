@@ -110,7 +110,7 @@
                     event.preventDefault();
                     var formResponses = $(this).serializeArray();
                     // Do your own form validation here.
-                    ACPToolKit.generateFormInCSV(formResponses, 'post');
+                    ACPToolKit.downloadFormData(formResponses, 'post');
                     alert('Thank you for your participation!');
                 });
             });

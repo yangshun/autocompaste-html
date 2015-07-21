@@ -1,326 +1,40 @@
 {
-    "P1": {
-        "experiments": [
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 2, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 4, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 6, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 2, "stimuli": "Power supply that delivers an AC voltage.\n\nSpring clip on the end of a test lead used to make a temporary connection.\n\nA meter used to measure current." },
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 4, "stimuli": "Power attained in an AC circuit as a product of effective voltage and current which reach their peak at different times.\n\nWhat is avionics ?\n\nA device that converts a radiated electromagnetic wave into an electrical wave." },
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 6, "stimuli": "A number system having only two symbols, 0 and 1. \n\nTraditionally in English, an article is usually considered to be a type of adjective.\n\nThe region of BJT operation between saturation and cut off used for linear amplification." },
-
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 2, "stimuli": "What is AC power supply ? Power supply that delivers an AC voltage.\n\nWhat is alligator clip ? Spring clip on the end of a test lead used to make a temporary connection.\n\nWhat is ammeter ? A meter used to measure current." },
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 4, "stimuli": "What is balanced bridge ? Condition that occurs when a bridge circuit is adjusted to produce a zero output.\n\nWhat is alpha ? Ratio of collector current to emitter current in a bipolar junction transistor (BJT) Greek letter alpha \"a\" is the symbol used.\n\nWhat is audio ? Relating to frequencies that can be heard by the human ear. Approximately 20 Hz to 20 kHz." },
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 6, "stimuli": "What is battery ? A DC voltage source containing two or more cells that convert chemical energy to electrical energy.\n\nWhat is bipolar junction transistor ? (BJT), A three terminal device in which emitter to collector current is controlled by base current.\n\nTraditionally in English, an article is usually considered to be a type of adjective. In some languages, articles are a special part of speech, which cannot easily be combined with other parts of speech. It is also possible for articles to be part of another part of speech category such as a determiner, an English part of speech category that combines articles and demonstratives (such as 'this' and 'that')." },
-
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 2, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 4, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 6, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 2, "stimuli": "Power supply that delivers an AC voltage.\n\nSpring clip on the end of a test lead used to make a temporary connection.\n\nA meter used to measure current." },
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 4, "stimuli": "Power attained in an AC circuit as a product of effective voltage and current which reach their peak at different times.\n\nWhat is avionics ?\n\nA device that converts a radiated electromagnetic wave into an electrical wave." },
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 6, "stimuli": "A number system having only two symbols, 0 and 1. \n\nTraditionally in English, an article is usually considered to be a type of adjective.\n\nThe region of BJT operation between saturation and cut off used for linear amplification." },
-
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 2, "stimuli": "What is AC power supply ? Power supply that delivers an AC voltage.\n\nWhat is alligator clip ? Spring clip on the end of a test lead used to make a temporary connection.\n\nWhat is ammeter ? A meter used to measure current." },
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 4, "stimuli": "What is balanced bridge ? Condition that occurs when a bridge circuit is adjusted to produce a zero output.\n\nWhat is alpha ? Ratio of collector current to emitter current in a bipolar junction transistor (BJT) Greek letter alpha \"a\" is the symbol used.\n\nWhat is audio ? Relating to frequencies that can be heard by the human ear. Approximately 20 Hz to 20 kHz." },
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 6, "stimuli": "What is battery ? A DC voltage source containing two or more cells that convert chemical energy to electrical energy.\n\nWhat is bipolar junction transistor ? (BJT), A three terminal device in which emitter to collector current is controlled by base current.\n\nTraditionally in English, an article is usually considered to be a type of adjective. In some languages, articles are a special part of speech, which cannot easily be combined with other parts of speech. It is also possible for articles to be part of another part of speech category such as a determiner, an English part of speech category that combines articles and demonstratives (such as 'this' and 'that')." }
-        ]
-    },
-    "P2": {
-        "experiments": [
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 2, "stimuli": "What is AC power supply ? Power supply that delivers an AC voltage.\n\nWhat is alligator clip ? Spring clip on the end of a test lead used to make a temporary connection.\n\nWhat is ammeter ? A meter used to measure current." },
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 4, "stimuli": "What is balanced bridge ? Condition that occurs when a bridge circuit is adjusted to produce a zero output.\n\nWhat is alpha ? Ratio of collector current to emitter current in a bipolar junction transistor (BJT) Greek letter alpha \"a\" is the symbol used.\n\nWhat is audio ? Relating to frequencies that can be heard by the human ear. Approximately 20 Hz to 20 kHz." },
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 6, "stimuli": "What is battery ? A DC voltage source containing two or more cells that convert chemical energy to electrical energy.\n\nWhat is bipolar junction transistor ? (BJT), A three terminal device in which emitter to collector current is controlled by base current.\n\nTraditionally in English, an article is usually considered to be a type of adjective. In some languages, articles are a special part of speech, which cannot easily be combined with other parts of speech. It is also possible for articles to be part of another part of speech category such as a determiner, an English part of speech category that combines articles and demonstratives (such as 'this' and 'that')." },
-
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 2, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 4, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 6, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 2, "stimuli": "Power supply that delivers an AC voltage.\n\nSpring clip on the end of a test lead used to make a temporary connection.\n\nA meter used to measure current." },
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 4, "stimuli": "Power attained in an AC circuit as a product of effective voltage and current which reach their peak at different times.\n\nWhat is avionics ?\n\nA device that converts a radiated electromagnetic wave into an electrical wave." },
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 6, "stimuli": "A number system having only two symbols, 0 and 1. \n\nTraditionally in English, an article is usually considered to be a type of adjective.\n\nThe region of BJT operation between saturation and cut off used for linear amplification." },
-
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 2, "stimuli": "What is AC power supply ? Power supply that delivers an AC voltage.\n\nWhat is alligator clip ? Spring clip on the end of a test lead used to make a temporary connection.\n\nWhat is ammeter ? A meter used to measure current." },
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 4, "stimuli": "What is balanced bridge ? Condition that occurs when a bridge circuit is adjusted to produce a zero output.\n\nWhat is alpha ? Ratio of collector current to emitter current in a bipolar junction transistor (BJT) Greek letter alpha \"a\" is the symbol used.\n\nWhat is audio ? Relating to frequencies that can be heard by the human ear. Approximately 20 Hz to 20 kHz." },
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 6, "stimuli": "What is battery ? A DC voltage source containing two or more cells that convert chemical energy to electrical energy.\n\nWhat is bipolar junction transistor ? (BJT), A three terminal device in which emitter to collector current is controlled by base current.\n\nTraditionally in English, an article is usually considered to be a type of adjective. In some languages, articles are a special part of speech, which cannot easily be combined with other parts of speech. It is also possible for articles to be part of another part of speech category such as a determiner, an English part of speech category that combines articles and demonstratives (such as 'this' and 'that')." },
-
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 2, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 4, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 6, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 2, "stimuli": "Power supply that delivers an AC voltage.\n\nSpring clip on the end of a test lead used to make a temporary connection.\n\nA meter used to measure current." },
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 4, "stimuli": "Power attained in an AC circuit as a product of effective voltage and current which reach their peak at different times.\n\nWhat is avionics ?\n\nA device that converts a radiated electromagnetic wave into an electrical wave." },
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 6, "stimuli": "A number system having only two symbols, 0 and 1. \n\nTraditionally in English, an article is usually considered to be a type of adjective.\n\nThe region of BJT operation between saturation and cut off used for linear amplification." }
-        ]
-    },
-    "P3": {
-        "experiments": [
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 2, "stimuli": "Power supply that delivers an AC voltage.\n\nSpring clip on the end of a test lead used to make a temporary connection.\n\nA meter used to measure current." },
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 4, "stimuli": "Power attained in an AC circuit as a product of effective voltage and current which reach their peak at different times.\n\nWhat is avionics ?\n\nA device that converts a radiated electromagnetic wave into an electrical wave." },
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 6, "stimuli": "A number system having only two symbols, 0 and 1. \n\nTraditionally in English, an article is usually considered to be a type of adjective.\n\nThe region of BJT operation between saturation and cut off used for linear amplification." },
-
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 2, "stimuli": "What is AC power supply ? Power supply that delivers an AC voltage.\n\nWhat is alligator clip ? Spring clip on the end of a test lead used to make a temporary connection.\n\nWhat is ammeter ? A meter used to measure current." },
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 4, "stimuli": "What is balanced bridge ? Condition that occurs when a bridge circuit is adjusted to produce a zero output.\n\nWhat is alpha ? Ratio of collector current to emitter current in a bipolar junction transistor (BJT) Greek letter alpha \"a\" is the symbol used.\n\nWhat is audio ? Relating to frequencies that can be heard by the human ear. Approximately 20 Hz to 20 kHz." },
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 6, "stimuli": "What is battery ? A DC voltage source containing two or more cells that convert chemical energy to electrical energy.\n\nWhat is bipolar junction transistor ? (BJT), A three terminal device in which emitter to collector current is controlled by base current.\n\nTraditionally in English, an article is usually considered to be a type of adjective. In some languages, articles are a special part of speech, which cannot easily be combined with other parts of speech. It is also possible for articles to be part of another part of speech category such as a determiner, an English part of speech category that combines articles and demonstratives (such as 'this' and 'that')." },
-
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 2, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 4, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 6, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 2, "stimuli": "Power supply that delivers an AC voltage.\n\nSpring clip on the end of a test lead used to make a temporary connection.\n\nA meter used to measure current." },
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 4, "stimuli": "Power attained in an AC circuit as a product of effective voltage and current which reach their peak at different times.\n\nWhat is avionics ?\n\nA device that converts a radiated electromagnetic wave into an electrical wave." },
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 6, "stimuli": "A number system having only two symbols, 0 and 1. \n\nTraditionally in English, an article is usually considered to be a type of adjective.\n\nThe region of BJT operation between saturation and cut off used for linear amplification." },
-
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 2, "stimuli": "What is AC power supply ? Power supply that delivers an AC voltage.\n\nWhat is alligator clip ? Spring clip on the end of a test lead used to make a temporary connection.\n\nWhat is ammeter ? A meter used to measure current." },
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 4, "stimuli": "What is balanced bridge ? Condition that occurs when a bridge circuit is adjusted to produce a zero output.\n\nWhat is alpha ? Ratio of collector current to emitter current in a bipolar junction transistor (BJT) Greek letter alpha \"a\" is the symbol used.\n\nWhat is audio ? Relating to frequencies that can be heard by the human ear. Approximately 20 Hz to 20 kHz." },
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 6, "stimuli": "What is battery ? A DC voltage source containing two or more cells that convert chemical energy to electrical energy.\n\nWhat is bipolar junction transistor ? (BJT), A three terminal device in which emitter to collector current is controlled by base current.\n\nTraditionally in English, an article is usually considered to be a type of adjective. In some languages, articles are a special part of speech, which cannot easily be combined with other parts of speech. It is also possible for articles to be part of another part of speech category such as a determiner, an English part of speech category that combines articles and demonstratives (such as 'this' and 'that')." },
-
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 2, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 4, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 6, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" }
-        ]
-    },
-    "P4": {
-        "experiments": [
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 2, "stimuli": "What is AC power supply ? Power supply that delivers an AC voltage.\n\nWhat is alligator clip ? Spring clip on the end of a test lead used to make a temporary connection.\n\nWhat is ammeter ? A meter used to measure current." },
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 4, "stimuli": "What is balanced bridge ? Condition that occurs when a bridge circuit is adjusted to produce a zero output.\n\nWhat is alpha ? Ratio of collector current to emitter current in a bipolar junction transistor (BJT) Greek letter alpha \"a\" is the symbol used.\n\nWhat is audio ? Relating to frequencies that can be heard by the human ear. Approximately 20 Hz to 20 kHz." },
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 6, "stimuli": "What is battery ? A DC voltage source containing two or more cells that convert chemical energy to electrical energy.\n\nWhat is bipolar junction transistor ? (BJT), A three terminal device in which emitter to collector current is controlled by base current.\n\nTraditionally in English, an article is usually considered to be a type of adjective. In some languages, articles are a special part of speech, which cannot easily be combined with other parts of speech. It is also possible for articles to be part of another part of speech category such as a determiner, an English part of speech category that combines articles and demonstratives (such as 'this' and 'that')." },
-
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 2, "stimuli": "Power supply that delivers an AC voltage.\n\nSpring clip on the end of a test lead used to make a temporary connection.\n\nA meter used to measure current." },
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 4, "stimuli": "Power attained in an AC circuit as a product of effective voltage and current which reach their peak at different times.\n\nWhat is avionics ?\n\nA device that converts a radiated electromagnetic wave into an electrical wave." },
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 6, "stimuli": "A number system having only two symbols, 0 and 1. \n\nTraditionally in English, an article is usually considered to be a type of adjective.\n\nThe region of BJT operation between saturation and cut off used for linear amplification." },
-
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 2, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 4, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 6, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 2, "stimuli": "What is AC power supply ? Power supply that delivers an AC voltage.\n\nWhat is alligator clip ? Spring clip on the end of a test lead used to make a temporary connection.\n\nWhat is ammeter ? A meter used to measure current." },
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 4, "stimuli": "What is balanced bridge ? Condition that occurs when a bridge circuit is adjusted to produce a zero output.\n\nWhat is alpha ? Ratio of collector current to emitter current in a bipolar junction transistor (BJT) Greek letter alpha \"a\" is the symbol used.\n\nWhat is audio ? Relating to frequencies that can be heard by the human ear. Approximately 20 Hz to 20 kHz." },
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 6, "stimuli": "What is battery ? A DC voltage source containing two or more cells that convert chemical energy to electrical energy.\n\nWhat is bipolar junction transistor ? (BJT), A three terminal device in which emitter to collector current is controlled by base current.\n\nTraditionally in English, an article is usually considered to be a type of adjective. In some languages, articles are a special part of speech, which cannot easily be combined with other parts of speech. It is also possible for articles to be part of another part of speech category such as a determiner, an English part of speech category that combines articles and demonstratives (such as 'this' and 'that')." },
-
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 2, "stimuli": "Power supply that delivers an AC voltage.\n\nSpring clip on the end of a test lead used to make a temporary connection.\n\nA meter used to measure current." },
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 4, "stimuli": "Power attained in an AC circuit as a product of effective voltage and current which reach their peak at different times.\n\nWhat is avionics ?\n\nA device that converts a radiated electromagnetic wave into an electrical wave." },
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 6, "stimuli": "A number system having only two symbols, 0 and 1. \n\nTraditionally in English, an article is usually considered to be a type of adjective.\n\nThe region of BJT operation between saturation and cut off used for linear amplification." },
-
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 2, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 4, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 6, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" }
-        ]
-    },
-    "P5": {
-        "experiments": [
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 2, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 4, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 6, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 2, "stimuli": "Power supply that delivers an AC voltage.\n\nSpring clip on the end of a test lead used to make a temporary connection.\n\nA meter used to measure current." },
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 4, "stimuli": "Power attained in an AC circuit as a product of effective voltage and current which reach their peak at different times.\n\nWhat is avionics ?\n\nA device that converts a radiated electromagnetic wave into an electrical wave." },
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 6, "stimuli": "A number system having only two symbols, 0 and 1. \n\nTraditionally in English, an article is usually considered to be a type of adjective.\n\nThe region of BJT operation between saturation and cut off used for linear amplification." },
-
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 2, "stimuli": "What is AC power supply ? Power supply that delivers an AC voltage.\n\nWhat is alligator clip ? Spring clip on the end of a test lead used to make a temporary connection.\n\nWhat is ammeter ? A meter used to measure current." },
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 4, "stimuli": "What is balanced bridge ? Condition that occurs when a bridge circuit is adjusted to produce a zero output.\n\nWhat is alpha ? Ratio of collector current to emitter current in a bipolar junction transistor (BJT) Greek letter alpha \"a\" is the symbol used.\n\nWhat is audio ? Relating to frequencies that can be heard by the human ear. Approximately 20 Hz to 20 kHz." },
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 6, "stimuli": "What is battery ? A DC voltage source containing two or more cells that convert chemical energy to electrical energy.\n\nWhat is bipolar junction transistor ? (BJT), A three terminal device in which emitter to collector current is controlled by base current.\n\nTraditionally in English, an article is usually considered to be a type of adjective. In some languages, articles are a special part of speech, which cannot easily be combined with other parts of speech. It is also possible for articles to be part of another part of speech category such as a determiner, an English part of speech category that combines articles and demonstratives (such as 'this' and 'that')." },
-
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 2, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 4, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 6, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 2, "stimuli": "Power supply that delivers an AC voltage.\n\nSpring clip on the end of a test lead used to make a temporary connection.\n\nA meter used to measure current." },
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 4, "stimuli": "Power attained in an AC circuit as a product of effective voltage and current which reach their peak at different times.\n\nWhat is avionics ?\n\nA device that converts a radiated electromagnetic wave into an electrical wave." },
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 6, "stimuli": "A number system having only two symbols, 0 and 1. \n\nTraditionally in English, an article is usually considered to be a type of adjective.\n\nThe region of BJT operation between saturation and cut off used for linear amplification." },
-
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 2, "stimuli": "What is AC power supply ? Power supply that delivers an AC voltage.\n\nWhat is alligator clip ? Spring clip on the end of a test lead used to make a temporary connection.\n\nWhat is ammeter ? A meter used to measure current." },
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 4, "stimuli": "What is balanced bridge ? Condition that occurs when a bridge circuit is adjusted to produce a zero output.\n\nWhat is alpha ? Ratio of collector current to emitter current in a bipolar junction transistor (BJT) Greek letter alpha \"a\" is the symbol used.\n\nWhat is audio ? Relating to frequencies that can be heard by the human ear. Approximately 20 Hz to 20 kHz." },
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 6, "stimuli": "What is battery ? A DC voltage source containing two or more cells that convert chemical energy to electrical energy.\n\nWhat is bipolar junction transistor ? (BJT), A three terminal device in which emitter to collector current is controlled by base current.\n\nTraditionally in English, an article is usually considered to be a type of adjective. In some languages, articles are a special part of speech, which cannot easily be combined with other parts of speech. It is also possible for articles to be part of another part of speech category such as a determiner, an English part of speech category that combines articles and demonstratives (such as 'this' and 'that')." }
-        ]
-    },
-    "P6": {
-        "experiments": [
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 2, "stimuli": "Power supply that delivers an AC voltage.\n\nSpring clip on the end of a test lead used to make a temporary connection.\n\nA meter used to measure current." },
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 4, "stimuli": "Power attained in an AC circuit as a product of effective voltage and current which reach their peak at different times.\n\nWhat is avionics ?\n\nA device that converts a radiated electromagnetic wave into an electrical wave." },
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 6, "stimuli": "A number system having only two symbols, 0 and 1. \n\nTraditionally in English, an article is usually considered to be a type of adjective.\n\nThe region of BJT operation between saturation and cut off used for linear amplification." },
-
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 2, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 4, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 6, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 2, "stimuli": "What is AC power supply ? Power supply that delivers an AC voltage.\n\nWhat is alligator clip ? Spring clip on the end of a test lead used to make a temporary connection.\n\nWhat is ammeter ? A meter used to measure current." },
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 4, "stimuli": "What is balanced bridge ? Condition that occurs when a bridge circuit is adjusted to produce a zero output.\n\nWhat is alpha ? Ratio of collector current to emitter current in a bipolar junction transistor (BJT) Greek letter alpha \"a\" is the symbol used.\n\nWhat is audio ? Relating to frequencies that can be heard by the human ear. Approximately 20 Hz to 20 kHz." },
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 6, "stimuli": "What is battery ? A DC voltage source containing two or more cells that convert chemical energy to electrical energy.\n\nWhat is bipolar junction transistor ? (BJT), A three terminal device in which emitter to collector current is controlled by base current.\n\nTraditionally in English, an article is usually considered to be a type of adjective. In some languages, articles are a special part of speech, which cannot easily be combined with other parts of speech. It is also possible for articles to be part of another part of speech category such as a determiner, an English part of speech category that combines articles and demonstratives (such as 'this' and 'that')." },
-
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 2, "stimuli": "Power supply that delivers an AC voltage.\n\nSpring clip on the end of a test lead used to make a temporary connection.\n\nA meter used to measure current." },
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 4, "stimuli": "Power attained in an AC circuit as a product of effective voltage and current which reach their peak at different times.\n\nWhat is avionics ?\n\nA device that converts a radiated electromagnetic wave into an electrical wave." },
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 6, "stimuli": "A number system having only two symbols, 0 and 1. \n\nTraditionally in English, an article is usually considered to be a type of adjective.\n\nThe region of BJT operation between saturation and cut off used for linear amplification." },
-
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 2, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 4, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 6, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 2, "stimuli": "What is AC power supply ? Power supply that delivers an AC voltage.\n\nWhat is alligator clip ? Spring clip on the end of a test lead used to make a temporary connection.\n\nWhat is ammeter ? A meter used to measure current." },
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 4, "stimuli": "What is balanced bridge ? Condition that occurs when a bridge circuit is adjusted to produce a zero output.\n\nWhat is alpha ? Ratio of collector current to emitter current in a bipolar junction transistor (BJT) Greek letter alpha \"a\" is the symbol used.\n\nWhat is audio ? Relating to frequencies that can be heard by the human ear. Approximately 20 Hz to 20 kHz." },
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 6, "stimuli": "What is battery ? A DC voltage source containing two or more cells that convert chemical energy to electrical energy.\n\nWhat is bipolar junction transistor ? (BJT), A three terminal device in which emitter to collector current is controlled by base current.\n\nTraditionally in English, an article is usually considered to be a type of adjective. In some languages, articles are a special part of speech, which cannot easily be combined with other parts of speech. It is also possible for articles to be part of another part of speech category such as a determiner, an English part of speech category that combines articles and demonstratives (such as 'this' and 'that')." }
-        ]
-    },
-    "P7": {
-        "experiments": [
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 2, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 4, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 6, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 2, "stimuli": "Power supply that delivers an AC voltage.\n\nSpring clip on the end of a test lead used to make a temporary connection.\n\nA meter used to measure current." },
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 4, "stimuli": "Power attained in an AC circuit as a product of effective voltage and current which reach their peak at different times.\n\nWhat is avionics ?\n\nA device that converts a radiated electromagnetic wave into an electrical wave." },
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 6, "stimuli": "A number system having only two symbols, 0 and 1. \n\nTraditionally in English, an article is usually considered to be a type of adjective.\n\nThe region of BJT operation between saturation and cut off used for linear amplification." },
-
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 2, "stimuli": "What is AC power supply ? Power supply that delivers an AC voltage.\n\nWhat is alligator clip ? Spring clip on the end of a test lead used to make a temporary connection.\n\nWhat is ammeter ? A meter used to measure current." },
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 4, "stimuli": "What is balanced bridge ? Condition that occurs when a bridge circuit is adjusted to produce a zero output.\n\nWhat is alpha ? Ratio of collector current to emitter current in a bipolar junction transistor (BJT) Greek letter alpha \"a\" is the symbol used.\n\nWhat is audio ? Relating to frequencies that can be heard by the human ear. Approximately 20 Hz to 20 kHz." },
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 6, "stimuli": "What is battery ? A DC voltage source containing two or more cells that convert chemical energy to electrical energy.\n\nWhat is bipolar junction transistor ? (BJT), A three terminal device in which emitter to collector current is controlled by base current.\n\nTraditionally in English, an article is usually considered to be a type of adjective. In some languages, articles are a special part of speech, which cannot easily be combined with other parts of speech. It is also possible for articles to be part of another part of speech category such as a determiner, an English part of speech category that combines articles and demonstratives (such as 'this' and 'that')." },
-
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 2, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 4, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 6, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 2, "stimuli": "Power supply that delivers an AC voltage.\n\nSpring clip on the end of a test lead used to make a temporary connection.\n\nA meter used to measure current." },
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 4, "stimuli": "Power attained in an AC circuit as a product of effective voltage and current which reach their peak at different times.\n\nWhat is avionics ?\n\nA device that converts a radiated electromagnetic wave into an electrical wave." },
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 6, "stimuli": "A number system having only two symbols, 0 and 1. \n\nTraditionally in English, an article is usually considered to be a type of adjective.\n\nThe region of BJT operation between saturation and cut off used for linear amplification." },
-
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 2, "stimuli": "What is AC power supply ? Power supply that delivers an AC voltage.\n\nWhat is alligator clip ? Spring clip on the end of a test lead used to make a temporary connection.\n\nWhat is ammeter ? A meter used to measure current." },
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 4, "stimuli": "What is balanced bridge ? Condition that occurs when a bridge circuit is adjusted to produce a zero output.\n\nWhat is alpha ? Ratio of collector current to emitter current in a bipolar junction transistor (BJT) Greek letter alpha \"a\" is the symbol used.\n\nWhat is audio ? Relating to frequencies that can be heard by the human ear. Approximately 20 Hz to 20 kHz." },
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 6, "stimuli": "What is battery ? A DC voltage source containing two or more cells that convert chemical energy to electrical energy.\n\nWhat is bipolar junction transistor ? (BJT), A three terminal device in which emitter to collector current is controlled by base current.\n\nTraditionally in English, an article is usually considered to be a type of adjective. In some languages, articles are a special part of speech, which cannot easily be combined with other parts of speech. It is also possible for articles to be part of another part of speech category such as a determiner, an English part of speech category that combines articles and demonstratives (such as 'this' and 'that')." }
-        ]
-    },
-    "P8": {
-        "experiments": [
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 2, "stimuli": "What is AC power supply ? Power supply that delivers an AC voltage.\n\nWhat is alligator clip ? Spring clip on the end of a test lead used to make a temporary connection.\n\nWhat is ammeter ? A meter used to measure current." },
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 4, "stimuli": "What is balanced bridge ? Condition that occurs when a bridge circuit is adjusted to produce a zero output.\n\nWhat is alpha ? Ratio of collector current to emitter current in a bipolar junction transistor (BJT) Greek letter alpha \"a\" is the symbol used.\n\nWhat is audio ? Relating to frequencies that can be heard by the human ear. Approximately 20 Hz to 20 kHz." },
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 6, "stimuli": "What is battery ? A DC voltage source containing two or more cells that convert chemical energy to electrical energy.\n\nWhat is bipolar junction transistor ? (BJT), A three terminal device in which emitter to collector current is controlled by base current.\n\nTraditionally in English, an article is usually considered to be a type of adjective. In some languages, articles are a special part of speech, which cannot easily be combined with other parts of speech. It is also possible for articles to be part of another part of speech category such as a determiner, an English part of speech category that combines articles and demonstratives (such as 'this' and 'that')." },
-
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 2, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 4, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 6, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 2, "stimuli": "Power supply that delivers an AC voltage.\n\nSpring clip on the end of a test lead used to make a temporary connection.\n\nA meter used to measure current." },
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 4, "stimuli": "Power attained in an AC circuit as a product of effective voltage and current which reach their peak at different times.\n\nWhat is avionics ?\n\nA device that converts a radiated electromagnetic wave into an electrical wave." },
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 6, "stimuli": "A number system having only two symbols, 0 and 1. \n\nTraditionally in English, an article is usually considered to be a type of adjective.\n\nThe region of BJT operation between saturation and cut off used for linear amplification." },
-
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 2, "stimuli": "What is AC power supply ? Power supply that delivers an AC voltage.\n\nWhat is alligator clip ? Spring clip on the end of a test lead used to make a temporary connection.\n\nWhat is ammeter ? A meter used to measure current." },
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 4, "stimuli": "What is balanced bridge ? Condition that occurs when a bridge circuit is adjusted to produce a zero output.\n\nWhat is alpha ? Ratio of collector current to emitter current in a bipolar junction transistor (BJT) Greek letter alpha \"a\" is the symbol used.\n\nWhat is audio ? Relating to frequencies that can be heard by the human ear. Approximately 20 Hz to 20 kHz." },
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 6, "stimuli": "What is battery ? A DC voltage source containing two or more cells that convert chemical energy to electrical energy.\n\nWhat is bipolar junction transistor ? (BJT), A three terminal device in which emitter to collector current is controlled by base current.\n\nTraditionally in English, an article is usually considered to be a type of adjective. In some languages, articles are a special part of speech, which cannot easily be combined with other parts of speech. It is also possible for articles to be part of another part of speech category such as a determiner, an English part of speech category that combines articles and demonstratives (such as 'this' and 'that')." },
-
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 2, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 4, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 6, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 2, "stimuli": "Power supply that delivers an AC voltage.\n\nSpring clip on the end of a test lead used to make a temporary connection.\n\nA meter used to measure current." },
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 4, "stimuli": "Power attained in an AC circuit as a product of effective voltage and current which reach their peak at different times.\n\nWhat is avionics ?\n\nA device that converts a radiated electromagnetic wave into an electrical wave." },
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 6, "stimuli": "A number system having only two symbols, 0 and 1. \n\nTraditionally in English, an article is usually considered to be a type of adjective.\n\nThe region of BJT operation between saturation and cut off used for linear amplification." }
-        ]
-    },
-    "P9": {
-        "experiments": [
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 2, "stimuli": "Power supply that delivers an AC voltage.\n\nSpring clip on the end of a test lead used to make a temporary connection.\n\nA meter used to measure current." },
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 4, "stimuli": "Power attained in an AC circuit as a product of effective voltage and current which reach their peak at different times.\n\nWhat is avionics ?\n\nA device that converts a radiated electromagnetic wave into an electrical wave." },
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 6, "stimuli": "A number system having only two symbols, 0 and 1. \n\nTraditionally in English, an article is usually considered to be a type of adjective.\n\nThe region of BJT operation between saturation and cut off used for linear amplification." },
-
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 2, "stimuli": "What is AC power supply ? Power supply that delivers an AC voltage.\n\nWhat is alligator clip ? Spring clip on the end of a test lead used to make a temporary connection.\n\nWhat is ammeter ? A meter used to measure current." },
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 4, "stimuli": "What is balanced bridge ? Condition that occurs when a bridge circuit is adjusted to produce a zero output.\n\nWhat is alpha ? Ratio of collector current to emitter current in a bipolar junction transistor (BJT) Greek letter alpha \"a\" is the symbol used.\n\nWhat is audio ? Relating to frequencies that can be heard by the human ear. Approximately 20 Hz to 20 kHz." },
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 6, "stimuli": "What is battery ? A DC voltage source containing two or more cells that convert chemical energy to electrical energy.\n\nWhat is bipolar junction transistor ? (BJT), A three terminal device in which emitter to collector current is controlled by base current.\n\nTraditionally in English, an article is usually considered to be a type of adjective. In some languages, articles are a special part of speech, which cannot easily be combined with other parts of speech. It is also possible for articles to be part of another part of speech category such as a determiner, an English part of speech category that combines articles and demonstratives (such as 'this' and 'that')." },
-
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 2, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 4, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 6, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 2, "stimuli": "Power supply that delivers an AC voltage.\n\nSpring clip on the end of a test lead used to make a temporary connection.\n\nA meter used to measure current." },
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 4, "stimuli": "Power attained in an AC circuit as a product of effective voltage and current which reach their peak at different times.\n\nWhat is avionics ?\n\nA device that converts a radiated electromagnetic wave into an electrical wave." },
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 6, "stimuli": "A number system having only two symbols, 0 and 1. \n\nTraditionally in English, an article is usually considered to be a type of adjective.\n\nThe region of BJT operation between saturation and cut off used for linear amplification." },
-
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 2, "stimuli": "What is AC power supply ? Power supply that delivers an AC voltage.\n\nWhat is alligator clip ? Spring clip on the end of a test lead used to make a temporary connection.\n\nWhat is ammeter ? A meter used to measure current." },
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 4, "stimuli": "What is balanced bridge ? Condition that occurs when a bridge circuit is adjusted to produce a zero output.\n\nWhat is alpha ? Ratio of collector current to emitter current in a bipolar junction transistor (BJT) Greek letter alpha \"a\" is the symbol used.\n\nWhat is audio ? Relating to frequencies that can be heard by the human ear. Approximately 20 Hz to 20 kHz." },
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 6, "stimuli": "What is battery ? A DC voltage source containing two or more cells that convert chemical energy to electrical energy.\n\nWhat is bipolar junction transistor ? (BJT), A three terminal device in which emitter to collector current is controlled by base current.\n\nTraditionally in English, an article is usually considered to be a type of adjective. In some languages, articles are a special part of speech, which cannot easily be combined with other parts of speech. It is also possible for articles to be part of another part of speech category such as a determiner, an English part of speech category that combines articles and demonstratives (such as 'this' and 'that')." },
-
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 2, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 4, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 6, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" }
-        ]
-    },
-    "P10": {
-        "experiments": [
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 2, "stimuli": "What is AC power supply ? Power supply that delivers an AC voltage.\n\nWhat is alligator clip ? Spring clip on the end of a test lead used to make a temporary connection.\n\nWhat is ammeter ? A meter used to measure current." },
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 4, "stimuli": "What is balanced bridge ? Condition that occurs when a bridge circuit is adjusted to produce a zero output.\n\nWhat is alpha ? Ratio of collector current to emitter current in a bipolar junction transistor (BJT) Greek letter alpha \"a\" is the symbol used.\n\nWhat is audio ? Relating to frequencies that can be heard by the human ear. Approximately 20 Hz to 20 kHz." },
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 6, "stimuli": "What is battery ? A DC voltage source containing two or more cells that convert chemical energy to electrical energy.\n\nWhat is bipolar junction transistor ? (BJT), A three terminal device in which emitter to collector current is controlled by base current.\n\nTraditionally in English, an article is usually considered to be a type of adjective. In some languages, articles are a special part of speech, which cannot easily be combined with other parts of speech. It is also possible for articles to be part of another part of speech category such as a determiner, an English part of speech category that combines articles and demonstratives (such as 'this' and 'that')." },
-
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 2, "stimuli": "Power supply that delivers an AC voltage.\n\nSpring clip on the end of a test lead used to make a temporary connection.\n\nA meter used to measure current." },
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 4, "stimuli": "Power attained in an AC circuit as a product of effective voltage and current which reach their peak at different times.\n\nWhat is avionics ?\n\nA device that converts a radiated electromagnetic wave into an electrical wave." },
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 6, "stimuli": "A number system having only two symbols, 0 and 1. \n\nTraditionally in English, an article is usually considered to be a type of adjective.\n\nThe region of BJT operation between saturation and cut off used for linear amplification." },
-
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 2, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 4, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 6, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 2, "stimuli": "What is AC power supply ? Power supply that delivers an AC voltage.\n\nWhat is alligator clip ? Spring clip on the end of a test lead used to make a temporary connection.\n\nWhat is ammeter ? A meter used to measure current." },
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 4, "stimuli": "What is balanced bridge ? Condition that occurs when a bridge circuit is adjusted to produce a zero output.\n\nWhat is alpha ? Ratio of collector current to emitter current in a bipolar junction transistor (BJT) Greek letter alpha \"a\" is the symbol used.\n\nWhat is audio ? Relating to frequencies that can be heard by the human ear. Approximately 20 Hz to 20 kHz." },
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 6, "stimuli": "What is battery ? A DC voltage source containing two or more cells that convert chemical energy to electrical energy.\n\nWhat is bipolar junction transistor ? (BJT), A three terminal device in which emitter to collector current is controlled by base current.\n\nTraditionally in English, an article is usually considered to be a type of adjective. In some languages, articles are a special part of speech, which cannot easily be combined with other parts of speech. It is also possible for articles to be part of another part of speech category such as a determiner, an English part of speech category that combines articles and demonstratives (such as 'this' and 'that')." },
-
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 2, "stimuli": "Power supply that delivers an AC voltage.\n\nSpring clip on the end of a test lead used to make a temporary connection.\n\nA meter used to measure current." },
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 4, "stimuli": "Power attained in an AC circuit as a product of effective voltage and current which reach their peak at different times.\n\nWhat is avionics ?\n\nA device that converts a radiated electromagnetic wave into an electrical wave." },
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 6, "stimuli": "A number system having only two symbols, 0 and 1. \n\nTraditionally in English, an article is usually considered to be a type of adjective.\n\nThe region of BJT operation between saturation and cut off used for linear amplification." },
-
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 2, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 4, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 6, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" }
-        ]
-    },
-    "P11": {
-        "experiments": [
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 2, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 4, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 6, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 2, "stimuli": "Power supply that delivers an AC voltage.\n\nSpring clip on the end of a test lead used to make a temporary connection.\n\nA meter used to measure current." },
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 4, "stimuli": "Power attained in an AC circuit as a product of effective voltage and current which reach their peak at different times.\n\nWhat is avionics ?\n\nA device that converts a radiated electromagnetic wave into an electrical wave." },
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 6, "stimuli": "A number system having only two symbols, 0 and 1. \n\nTraditionally in English, an article is usually considered to be a type of adjective.\n\nThe region of BJT operation between saturation and cut off used for linear amplification." },
-
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 2, "stimuli": "What is AC power supply ? Power supply that delivers an AC voltage.\n\nWhat is alligator clip ? Spring clip on the end of a test lead used to make a temporary connection.\n\nWhat is ammeter ? A meter used to measure current." },
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 4, "stimuli": "What is balanced bridge ? Condition that occurs when a bridge circuit is adjusted to produce a zero output.\n\nWhat is alpha ? Ratio of collector current to emitter current in a bipolar junction transistor (BJT) Greek letter alpha \"a\" is the symbol used.\n\nWhat is audio ? Relating to frequencies that can be heard by the human ear. Approximately 20 Hz to 20 kHz." },
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 6, "stimuli": "What is battery ? A DC voltage source containing two or more cells that convert chemical energy to electrical energy.\n\nWhat is bipolar junction transistor ? (BJT), A three terminal device in which emitter to collector current is controlled by base current.\n\nTraditionally in English, an article is usually considered to be a type of adjective. In some languages, articles are a special part of speech, which cannot easily be combined with other parts of speech. It is also possible for articles to be part of another part of speech category such as a determiner, an English part of speech category that combines articles and demonstratives (such as 'this' and 'that')." },
-
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 2, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 4, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 6, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 2, "stimuli": "Power supply that delivers an AC voltage.\n\nSpring clip on the end of a test lead used to make a temporary connection.\n\nA meter used to measure current." },
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 4, "stimuli": "Power attained in an AC circuit as a product of effective voltage and current which reach their peak at different times.\n\nWhat is avionics ?\n\nA device that converts a radiated electromagnetic wave into an electrical wave." },
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 6, "stimuli": "A number system having only two symbols, 0 and 1. \n\nTraditionally in English, an article is usually considered to be a type of adjective.\n\nThe region of BJT operation between saturation and cut off used for linear amplification." },
-
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 2, "stimuli": "What is AC power supply ? Power supply that delivers an AC voltage.\n\nWhat is alligator clip ? Spring clip on the end of a test lead used to make a temporary connection.\n\nWhat is ammeter ? A meter used to measure current." },
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 4, "stimuli": "What is balanced bridge ? Condition that occurs when a bridge circuit is adjusted to produce a zero output.\n\nWhat is alpha ? Ratio of collector current to emitter current in a bipolar junction transistor (BJT) Greek letter alpha \"a\" is the symbol used.\n\nWhat is audio ? Relating to frequencies that can be heard by the human ear. Approximately 20 Hz to 20 kHz." },
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 6, "stimuli": "What is battery ? A DC voltage source containing two or more cells that convert chemical energy to electrical energy.\n\nWhat is bipolar junction transistor ? (BJT), A three terminal device in which emitter to collector current is controlled by base current.\n\nTraditionally in English, an article is usually considered to be a type of adjective. In some languages, articles are a special part of speech, which cannot easily be combined with other parts of speech. It is also possible for articles to be part of another part of speech category such as a determiner, an English part of speech category that combines articles and demonstratives (such as 'this' and 'that')." }
-        ]
-    },
-    "P12": {
-        "experiments": [
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 2, "stimuli": "Power supply that delivers an AC voltage.\n\nSpring clip on the end of a test lead used to make a temporary connection.\n\nA meter used to measure current." },
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 4, "stimuli": "Power attained in an AC circuit as a product of effective voltage and current which reach their peak at different times.\n\nWhat is avionics ?\n\nA device that converts a radiated electromagnetic wave into an electrical wave." },
-            { "technique": "ctrlc_ctrlv", "granularity": "sentence", "open_windows": 6, "stimuli": "A number system having only two symbols, 0 and 1. \n\nTraditionally in English, an article is usually considered to be a type of adjective.\n\nThe region of BJT operation between saturation and cut off used for linear amplification." },
-
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 2, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 4, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-            { "technique": "ctrlc_ctrlv", "granularity": "word", "open_windows": 6, "stimuli": "acceptor\n\nmagnitude\n\nmanganese"  },
-
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 2, "stimuli": "What is AC power supply ? Power supply that delivers an AC voltage.\n\nWhat is alligator clip ? Spring clip on the end of a test lead used to make a temporary connection.\n\nWhat is ammeter ? A meter used to measure current." },
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 4, "stimuli": "What is balanced bridge ? Condition that occurs when a bridge circuit is adjusted to produce a zero output.\n\nWhat is alpha ? Ratio of collector current to emitter current in a bipolar junction transistor (BJT) Greek letter alpha \"a\" is the symbol used.\n\nWhat is audio ? Relating to frequencies that can be heard by the human ear. Approximately 20 Hz to 20 kHz." },
-            { "technique": "ctrlc_ctrlv", "granularity": "paragraph", "open_windows": 6, "stimuli": "What is battery ? A DC voltage source containing two or more cells that convert chemical energy to electrical energy.\n\nWhat is bipolar junction transistor ? (BJT), A three terminal device in which emitter to collector current is controlled by base current.\n\nTraditionally in English, an article is usually considered to be a type of adjective. In some languages, articles are a special part of speech, which cannot easily be combined with other parts of speech. It is also possible for articles to be part of another part of speech category such as a determiner, an English part of speech category that combines articles and demonstratives (such as 'this' and 'that')." },
-
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 2, "stimuli": "Power supply that delivers an AC voltage.\n\nSpring clip on the end of a test lead used to make a temporary connection.\n\nA meter used to measure current." },
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 4, "stimuli": "Power attained in an AC circuit as a product of effective voltage and current which reach their peak at different times.\n\nWhat is avionics ?\n\nA device that converts a radiated electromagnetic wave into an electrical wave." },
-            { "technique": "autocompaste", "granularity": "sentence", "open_windows": 6, "stimuli": "A number system having only two symbols, 0 and 1. \n\nTraditionally in English, an article is usually considered to be a type of adjective.\n\nThe region of BJT operation between saturation and cut off used for linear amplification." },
-
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 2, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 4, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-            { "technique": "autocompaste", "granularity": "word", "open_windows": 6, "stimuli": "acceptor\n\nmagnitude\n\nmanganese" },
-
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 2, "stimuli": "What is AC power supply ? Power supply that delivers an AC voltage.\n\nWhat is alligator clip ? Spring clip on the end of a test lead used to make a temporary connection.\n\nWhat is ammeter ? A meter used to measure current." },
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 4, "stimuli": "What is balanced bridge ? Condition that occurs when a bridge circuit is adjusted to produce a zero output.\n\nWhat is alpha ? Ratio of collector current to emitter current in a bipolar junction transistor (BJT) Greek letter alpha \"a\" is the symbol used.\n\nWhat is audio ? Relating to frequencies that can be heard by the human ear. Approximately 20 Hz to 20 kHz." },
-            { "technique": "autocompaste", "granularity": "paragraph", "open_windows": 6, "stimuli": "What is battery ? A DC voltage source containing two or more cells that convert chemical energy to electrical energy.\n\nWhat is bipolar junction transistor ? (BJT), A three terminal device in which emitter to collector current is controlled by base current.\n\nTraditionally in English, an article is usually considered to be a type of adjective. In some languages, articles are a special part of speech, which cannot easily be combined with other parts of speech. It is also possible for articles to be part of another part of speech category such as a determiner, an English part of speech category that combines articles and demonstratives (such as 'this' and 'that')." }
-        ]
-    }
+    "experiments": [
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "sentence",
+            "data_file": "data/texts.json",
+            "stimuli": "What is acceptor atoms?" 
+        },
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "paragraph",
+            "data_file": "data/texts.json",
+            "stimuli": "What is AC coupling? Circuit that passes an AC signal while blocking a DC voltage." 
+        },
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "phrase",
+            "data_file": "data/texts.json",
+            "stimuli": "number of positive charges" 
+        },
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "sentence",
+            "data_file": "data/texts.json",
+            "stimuli": "What is acceptor atoms?" 
+        },
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "paragraph",
+            "data_file": "data/texts.json",
+            "stimuli": "What is AC coupling? Circuit that passes an AC signal while blocking a DC voltage." 
+        },
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "phrase",
+            "data_file": "data/texts.json",
+            "stimuli": "number of positive charges" 
+        }        
+    ]
 }
