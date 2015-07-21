@@ -117,33 +117,6 @@ var ACPToolKit = (function () {
               $(win).find('pre').empty().append(content);
             }
         });
-
-        // Window switching capability through shortcuts.
-        // Users can cycle through windows using Alt+Q (closest to Alt+Tab).
-        var switcher_list = [ ];
-        var switcher_list_item = -1;
-        var switcher_list_pause_update = false;
-
-        wm.addEventListener('windowcreated', function (created_event) {
-            console.log('wm windowcreated');
-            switcher_list.push(created_event.name);
-        });
-
-        wm.addEventListener('windowfocus', function (focus_event) {
-            console.log('wm windowfocus');
-            if (switcher_list_pause_update) {
-                return;
-            }
-
-            // Search list for focused window.
-            switcher_list = switcher_list.filter(function (value, index, array) {
-                return focus_event.name != value;
-            });
-
-            switcher_list.push(focus_event.name);
-        });
-
-
     }
 
     return module;
