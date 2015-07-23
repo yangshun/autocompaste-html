@@ -31,7 +31,7 @@ $ python -m http.server     // Python 3
 
 Visit [http://localhost:8000/](http://localhost:8000/) in your web browser (Chrome preferred) to see the welcome screen for the experiment.
 
-### Interface
+### Interface Walkthrough
 
 There are a total of 5 screens for experiment, each corresponding to a step of the experiment. The breakdown of the screens:
 
@@ -47,7 +47,8 @@ Path: `index.html`.
 
 The welcome interface of the experiment where basic instructions are provided to your participants. Collect input from the participant/experimenter the participant ID so that you can generate the correct experiment trials and data log for a particular experiment session.
 
-The participant ID entered here will be saved into HTML5 `localStorage` and can be obtained from other screens too.
+The participant ID entered here will be saved into HTML5 `localStorage` and the value is refereenced in other screens too. If other pages are visited and the participant ID has not been set, the user will be prompted to enter a value to be used as the participant ID.
+
 
 ##### Pre-Experiment Questionnaire Screen
 
@@ -101,7 +102,123 @@ Please design a basic post-experimental questionnaire to help you to provide mor
 
 Upon clicking the Submit button, form responses on the page is serialized and CSV file containing the responses will be generated and available for downloading into the user's computer. The CSV file will be named `acp-<pid>-post.csv`.
 
+
+### Documentation
+
+All interface files are saved as `.html` files in the root directory of the repository. The names of the files correspond to the respective screens.
+
+##### Page-specific Matters
+
+At the bottom of the page there is JavaScript coded written, to handle the user interactions and fetching of participant IDs. Most of the code is pretty trivial, except the script at the bottom of `experiment.html`. You will need to modify the code at the bottom of `experiment.html` to add in non-timed trial runs and a short break in the middle of the experiment.
+
+**DO NOT** modify the names of the files as the file names are hardcoded in each page's for navigation purposes.
+
+##### ACPToolKit.js
+
+Every page includes the library `ACPToolKit.js`, which provides some common utility functions that you will need for the experiment. `ACPToolKit.js` exposes the global variable `ACPToolKit` and has the following public functions:
+
+- `setCurrentParticipantId ( <String> id)`
+
+	Changes the current participant ID value, that is referenced across every screen.
+
+- `getCurrentParticipantId ()`
+
+	**Returns:** 
+	- `participant_id`: The current participant ID value.
+	
+	<br>
+	**Description:**
+
+	 If the participant ID has not been set, the user will be prompted to enter a string value.
+	
+- `clearParticipantId ()`
+	
+	Clears the `localStorage` of the `pid` value.
+
+- `downloadFormData (formResponses, type)`
+
+	**Parameters:**	
+
+	- `formResponses`: An array of objects `{ name: <label>, value: <value>}`.
+	- `type`: A string that will be appended to the file name of the generated CSV.
+	
+	<br>
+	**Description:**
+	
+	This function generate a CSV file consisting of a row of headers and a row of values
+	from the array of objects passed in. The `name` keys of the objects will form the row 	of	headers and the `value` keys will form the row of values. This method is being used 	by the Pre-Experiment Questionnaire and Post-Experiment Questionnaire pages. A CSV file 	is generated that will be downloaded by the user's browser.
+	
+
+- `downloadTrialResults (data)`
+
+	**Parameters:**	
+
+	- `data`: A two-dimensional array where each element in the array should be a number or a string.
+	
+	<br>
+	**Description:**
+	
+	This function takes in a two-dimensional array that represents the trial results and 	generates a CSV file out of it. The header row has to be the first array in the two-dimensional array.
+
+- `presentTrial (options)`
+
+	**Parameters:**	
+
+	- `options`: An object that recognizes the following keys:
+		- `technique`: The technique for the current trial, either **"AUTOCOMPASTE"** or **"TRADITIONAL"**. The interface will enable/disable the AutoComPaste functionality.
+		- `granularity`: Level of granularity of the stimuli of the current trial. one of the three values **"sentence"**, **"phrase"**, or **"paragraph"**. Note that this value is only used to update the 			interface for displaying of the conditions.
+		- `data_file`: The path to a JSON file consisting of a data object. The format of the data object will be explained in detail later.
+		- `stimuli`: The stimuli for a trial. There is no checking done by `ACPToolkit.js` to ensure that the stimuli here is consistent with the `granularity` given above.
+	
+	<br>
+	**Description:**
+	
+	Upon invoking of this function, the experiment interface will be cleared and the Text Editor and Article windows will be showed. The number of windows being showed depends on the number of objects in the JSON file referenced by `data_file`. **Note:** This method is only available on the `experiment.html` page.
+	
+
+- `getCurrentTrialState ()`
+
+	**Returns:**	
+
+	- `options`: An object containing the following keys:
+		- `technique`: The `technique` value for the current trial.
+		- `granularity`: The `granularity` value for the current trial.
+		- `data_file`: The `data_file` value for the current trial.
+		- `technique`: The `technique` value for the current trial.
+		- `start_time`: The starting time of the current trial, given in milliseconds since midnight 01 January, 1970 UTC.
+		- `end_time`: The ending time of the current trial, given in milliseconds since midnight 01 January, 1970 UTC.
+		- `duration`: The duration of the current trial, given in milliseconds.
+		- `user_response`: The text entered in the Text Editor window.
+	
+	<br>
+	**Description:**
+	
+	Returns the state of the current trial. This method has to called to retrieve the current trial's state before the next `presentTrial()` is called or else the data will be overwritten. **Note:** This method is only available on the `experiment.html` page.
+
+	
+##### Data Object File
+
+
+Paths to data object files are being passed into the `ACPToolKit.presentTrial()` method as one of the values. Each data object file has to have the following format, an array of objects with the keys `title` and `url`.
+
+```
+[
+    {
+        "title": "Title of Article 1",
+        "url": "path/to/article/1"
+    },
+    {
+        "title": "Title of Article 2",
+        "url": "path/to/article/2"
+    },
+    ...
+]
+```
+    
+Each object in the array will be transformed into a window and displayed in the interface, with `title` corresponding to the window title and text content loaded from the file located at `url`. Refer to `data/texts.json` for an example of the data object file. Each article should be in the `.txt` format.
+
+
 ### Credits
 
-- Tay Yang Shun
-- Wong Yong Jie
+- Tay Yang Shun (Interface and ACPToolKit)
+- Wong Yong Jie (AutoComPaste Engine)
