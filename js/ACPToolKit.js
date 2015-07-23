@@ -6,7 +6,7 @@ var ACPToolKit = (function () {
         DataStorage.setItem('pid', pid);
     }
 
-    module.getCurrentParticipantId = function (pid) {
+    module.getCurrentParticipantId = function () {
         var pid = DataStorage.getItem('pid');
         if (!pid) {
             alert('Current participant not set!');
@@ -19,7 +19,7 @@ var ACPToolKit = (function () {
     module.clearAllData = function () {
         ['pid', 'pretest', 'trials', 'posttest'].forEach(function (key) {
             DataStorage.removeItem(key);
-        });        
+        });
     }
 
     module.downloadFormData = function (formResponses, type) {
@@ -59,7 +59,7 @@ var ACPToolKit = (function () {
 
         $('body').append($a[0]);
         $a.get(0).click();
-        $a.remove();  
+        $a.remove();
     }
 
     $(function () {
@@ -85,7 +85,7 @@ var ACPToolKit = (function () {
             $('.js-expt-technique').text(options.technique);
             $('.js-expt-granularity').text(options.granularity);
             $('.js-expt-stimuli').text(options.stimuli);
-            
+
             // Clean up DOM
             wm.destroyAllWindows();
             $('#autocompaste-completion').remove();
@@ -100,16 +100,16 @@ var ACPToolKit = (function () {
                     break;
                 case 'ACP':
                 default:
-                    var engine = new AutoComPaste.Engine();        
+                    var engine = new AutoComPaste.Engine();
                     break;
             }
-            
+
             var iface = new AutoComPaste.Interface(wm, engine, data_file);
 
             // Highlight the relevant text.
             iface.addEventListener('loaded', function () {
                 var lines_to_highlight = stimuli.split("\n\n");
-            
+
                 var windows = wm.getWindowList();
                 for (var i = 0; i < windows.length; i++) {
                     if (windows[i] == 'text_editor') {

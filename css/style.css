@@ -3,6 +3,10 @@ body {
   margin-bottom: 40px;
 }
 
+body.experiment-page {
+  margin-bottom: 0;
+}
+
 .pid {
   color: red;
   font-weight: bold;
@@ -39,8 +43,15 @@ body {
 }
 
 #autocompaste-display > .wm-window .modal-header {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
   cursor: move;
   padding: 5px 15px;
+}
+
+#autocompaste-display > .wm-window .modal-header:hover {
+  background-color: #f0f0f0;
+  transition: all .3s;
 }
 
 #autocompaste-display > .wm-window .modal-header h4 {
@@ -118,4 +129,13 @@ body {
 
 #error-overlay .modal-dialog {
   margin-top: 100px;
+}
+
+#stimuli {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

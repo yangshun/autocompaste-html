@@ -1,7 +1,7 @@
 /* ========================================================================
  * An implementation of AutoComPaste in HTML
  * ========================================================================
- * Copyright 2013 Wong Yong Jie
+ * Copyright 2015 Wong Yong Jie and Tay Yang Shun
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -110,14 +110,14 @@ var WindowManager = (function () {
           return false;
         }
       }
-      
+
       // Create the new structure for the window.
       var win_struct = this._createWindowStruct ();
       privates.windows[name] = {
         struct: win_struct
       };
 
-      // Set the position to 0, 0. Since we are using CSS transforms for 
+      // Set the position to 0, 0. Since we are using CSS transforms for
       // window positions, this is not used in the end. But we need a reference
       // point.
       var wm = this;
@@ -131,7 +131,7 @@ var WindowManager = (function () {
       if (width != undefined) {
         $(win_struct).css({
           'min-width': width + 'px',
-          'width': width + 'px' 
+          'width': width + 'px'
         });
       }
 
@@ -152,7 +152,7 @@ var WindowManager = (function () {
         .mousedown(function (mousedown_event) {
           // Obtain the absolute coordinates of the display.
           var display_coords = $(privates.display_element).offset();
-            
+
           // Compute the offset of the cursor from the top left corner of the
           // window.
           var cursor_rel_coords = $(privates.windows[name].struct).offset();
@@ -177,7 +177,7 @@ var WindowManager = (function () {
         .mouseup(function () {
           var was_dragging = privates.dragging_active;
           $(window).unbind('mousemove');
-          
+
           privates.dragging_active = false;
           $(privates.display_element).removeClass('dragging-active');
         });
@@ -187,7 +187,7 @@ var WindowManager = (function () {
         window: privates.windows[name],
         name: name
       });
-      
+
       // Set the new window to be focused.
       wm.setFocus(name);
       return true;
@@ -321,7 +321,7 @@ var WindowManager = (function () {
       }
 
       // Top edge.
-      // This case is special, because we don't want the title to go out of 
+      // This case is special, because we don't want the title to go out of
       // bounds and become undraggable.
       if (y < 0 - title_height) {
         y = 0 - title_height;
@@ -362,7 +362,7 @@ var WindowManager = (function () {
       if (transform_mat == 'none') {
         return;
       }
-    
+
       transform_mat = transform_mat
         .replace(/^\w+\(/, "[")
         .replace(/\)$/, "]");
@@ -383,7 +383,7 @@ var WindowManager = (function () {
      * the parameters are not valid, then this function returns false.
      *
      * Content can be any type that can be appended, i.e. can be used with
-     * $.append (). 
+     * $.append ().
      *
      * @param {String} name    The name of the window
      * @param {Object} content The content to be set
@@ -559,7 +559,7 @@ var WindowManager = (function () {
      */
     this.destroyAllWindows = function destroyAllWindows () {
       for (var name in privates.windows) {
-        this.destroyWindow(name); 
+        this.destroyWindow(name);
       }
     };
 
@@ -576,7 +576,7 @@ var WindowManager = (function () {
           count++;
         }
       }
-      
+
       return count;
     };
 
@@ -641,7 +641,7 @@ var WindowManager = (function () {
         privates.display_height = curr_actual_height;
         this._handleResizeEvent(curr_actual_width, curr_actual_height);
       }
-      
+
       // Figure out which windows are damaged and re-render.
       for (var i = 0; i < privates.damaged_windows.length; i++) {
         var window_name = privates.damaged_windows[i];
@@ -735,5 +735,3 @@ var WindowManager = (function () {
   return WindowManager;
 
 })();
-
-/* vim: set ts=2 sw=2 et: */

@@ -6,17 +6,13 @@
         <title>CS4249 Assignment 1</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-
-        <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+        <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/style.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
-    <body>
+    <body class="experiment-page">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -60,7 +56,7 @@
                         </tbody>
                     </table>
                     <p>Please copy-paste the following <span class="js-expt-granularity">phrase</span> using the <span class="js-expt-technique">AUTOCOMPASTE</span> technique from one of the open windows.</p>
-                    <div class="alert alert-danger js-expt-stimuli">This is a long stimuli!</div>
+                    <div id="stimuli" class="alert alert-danger js-expt-stimuli">This is a long stimuli!</div>
                     <button class="btn btn-primary btn-lg" onclick="next()">Next Task</button>
                 </div>
                 <div id="autocompaste" class="col-sm-9">
@@ -72,20 +68,20 @@
         <script src="js/vendor/jquery-1.11.2.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-        <script src="js/window_manager.js"></script>
-        <script src="js/autocompaste/engine.js"></script>
-        <script src="js/autocompaste/interface.js"></script>
-        <script src="js/autocompaste/editor.js"></script>
-        <script src="js/autocompaste/autocompaste.js"></script>
+        <script src="js/WindowManager.js"></script>
+        <script src="js/AutoComPaste/engine.js"></script>
+        <script src="js/AutoComPaste/interface.js"></script>
+        <script src="js/AutoComPaste/editor.js"></script>
+        <script src="js/AutoComPaste/autocompaste.js"></script>
         <script src="js/DataStorage.js"></script>
         <script src="js/ACPToolKit.js"></script>
-        
+
         <script>
 
             var trialsData;
             var currentTrial;
             var totalNumberOfTrials;
-            var headers = ['Participant id', 'Technique', 'Granularity', 
+            var headers = ['Participant id', 'Technique', 'Granularity',
                             'Trial no', 'Stimuli', 'User Response', 'Trial Start Time',
                             'Trial End Time', 'Trial Time', 'Accuracy'];
             var trialData = [];
@@ -94,7 +90,7 @@
             function next () {
                 if (currentTrial !== 0) {
                     var trialResult = ACPToolKit.getCurrentTrialState();
-                    
+
                     var technique = trialResult.technique;
                     var granularity = trialResult.granularity;
                     var trialNum = currentTrial;
@@ -119,12 +115,12 @@
                     // Last trial completed
                     ACPToolKit.downloadTrialResults(trialData);
                     window.location = 'questionnaire-post.html';
-                }                
-            }  
+                }
+            }
 
             $(document).ready(function () {
                 $.get('data/experiments.json', function (data) {
-                    trialsData = data.experiments;                    
+                    trialsData = data.experiments;
                     currentTrial = 0;
                     totalNumberOfTrials = trialsData.length;
                     $('.js-expt-num-trials').text(totalNumberOfTrials);
@@ -132,7 +128,7 @@
                     next();
                     pid = ACPToolKit.getCurrentParticipantId();
                 })
-            });            
+            });
         </script>
     </body>
 </html>
