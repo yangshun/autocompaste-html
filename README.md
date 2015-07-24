@@ -22,14 +22,14 @@ You can either download as a zip file or clone this repository to get it running
   $ git clone git@github.com:<your username>/autocompaste-html.git
   ```
 
-You will need your own local web server to run experiment. [XAMPP](git@github.com:yangshun/autocompaste-html.git) or [MAMP](https://www.mamp.info/en/) are good choices for quick and easy setting up of local web servers. If you have Python installed, a simpler way exists. Running the following command in the root of the repository directory will start a local web server at port 8000:
+You will need your own local web server to run experiment. [XAMPP](https://www.apachefriends.org/index.html) or [MAMP](https://www.mamp.info/en/) are good choices for quick and easy setting up of local web servers. If you have Python installed, a simpler way exists. Running the following command in the root of the repository directory will start a local web server at port 8000:
 
 ```
 $ python -m SimpleHTTPServer    // Python 2
 $ python -m http.server         // Python 3
 ```
 
-Visit [http://localhost:8000/](http://localhost:8000/) in your web browser (Chrome preferred) to see the welcome screen for the experiment.
+Visit [http://localhost:8000/](http://localhost:8000/) in your web browser (Chrome preferred) to see the welcome screen for the experiment. Github not only hosts code, it can also serve static content from repositories via [Github Pages](https://pages.github.com/). Pushing to the `gh-pages` branch of your repository will update the publicly accessible website for your project. You can try out this repository at [http://yangshun.github.io/autocompaste-html](http://yangshun.github.io/autocompaste-html). For your own forked repository, visit `http://<your username>.github.io/autocompaste-html`. Hosting the experiment on the WWW is a good way to let your friends participate in the experiment remotely. However, be sure to make your forked repository private to avoid being plagiarised.
 
 ### Interface Walkthrough
 
