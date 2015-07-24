@@ -122,6 +122,7 @@ Every page includes the library `ACPToolKit.js`, which provides some common util
 
 - `setCurrentParticipantId ( <String> id)`
 
+	**Description:**
 	Changes the current participant ID value, that is referenced across every screen.
 
 - `getCurrentParticipantId ()`
@@ -129,7 +130,6 @@ Every page includes the library `ACPToolKit.js`, which provides some common util
 	**Returns:** 
 	- `participant_id`: The current participant ID value.
 	
-	<br>
 	**Description:**
 
 	 If the participant ID has not been set, the user will be prompted to enter a string value.
@@ -145,7 +145,6 @@ Every page includes the library `ACPToolKit.js`, which provides some common util
 	- `formResponses`: An array of objects `{ name: <label>, value: <value>}`.
 	- `type`: A string that will be appended to the file name of the generated CSV.
 	
-	<br>
 	**Description:**
 	
 	This function generate a CSV file consisting of a row of headers and a row of values
@@ -158,7 +157,6 @@ Every page includes the library `ACPToolKit.js`, which provides some common util
 
 	- `data`: A two-dimensional array where each element in the array should be a number or a string.
 	
-	<br>
 	**Description:**
 	
 	This function takes in a two-dimensional array that represents the trial results and 	generates a CSV file out of it. The header row has to be the first array in the two-dimensional array.
@@ -173,7 +171,6 @@ Every page includes the library `ACPToolKit.js`, which provides some common util
 		- `data_file`: The path to a JSON file consisting of a data object. The format of the data object will be explained in detail later.
 		- `stimuli`: The stimuli for a trial. There is no checking done by `ACPToolkit.js` to ensure that the stimuli here is consistent with the `granularity` given above.
 	
-	<br>
 	**Description:**
 	
 	Upon invoking of this function, the experiment interface will be cleared and the Text Editor and Article windows will be showed. The number of windows being showed depends on the number of objects in the JSON file referenced by `data_file`. **Note:** This method is only available on the `experiment.html` page.
@@ -193,7 +190,6 @@ Every page includes the library `ACPToolKit.js`, which provides some common util
 		- `duration`: The duration of the current trial, given in milliseconds.
 		- `user_response`: The text entered in the Text Editor window.
 	
-	<br>
 	**Description:**
 	
 	Returns the state of the current trial. This method has to called to retrieve the current trial's state before the next `presentTrial()` is called or else the data will be overwritten. **Note:** This method is only available on the `experiment.html` page.
