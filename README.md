@@ -25,8 +25,8 @@ You can either download as a zip file or clone this repository to get it running
 You will need your own local web server to run experiment. [XAMPP](git@github.com:yangshun/autocompaste-html.git) or [MAMP](https://www.mamp.info/en/) are good choices for quick and easy setting up of local web servers. If you have Python installed, a simpler way exists. Running the following command in the root of the repository directory will start a local web server at port 8000:
 
 ```
-$ python -m SimpleHTTPServer  // Python 2
-$ python -m http.server     // Python 3
+$ python -m SimpleHTTPServer    // Python 2
+$ python -m http.server         // Python 3
 ```
 
 Visit [http://localhost:8000/](http://localhost:8000/) in your web browser (Chrome preferred) to see the welcome screen for the experiment.
@@ -59,6 +59,8 @@ This part of the interface collects whatever pre-experiment information. Please 
 You are given a template consisting of 5 basic kinds of form fields used in surveys. Modify the HTML in `questionnaire-pre.html` to add in your own questions and options. Upon clicking the **Submit** button, form responses on the page is serialized and CSV file containing the responses will be generated and available for downloading into the user's computer. The CSV file will be named `acp-<pid>-pre.csv`.
 
 You are free to add in even more types of form fields and/or change the layout to suit your needs. However, it is up to you to ensure that your new form fields will be serialized properly when the **Submit** button is pressed.
+
+No validation has been added for the form fields. You have to ensure your participant fills in the required fields properly. Alternatively, you can add your own validation code.
 
 ##### Instructions Screen
 
@@ -111,7 +113,7 @@ All interface files are saved as `.html` files in the root directory of the repo
 
 At the bottom of the page there is JavaScript coded written, to handle the user interactions and fetching of participant IDs. Most of the code is pretty trivial, except the script at the bottom of `experiment.html`. You will need to modify the code at the bottom of `experiment.html` to add in non-timed trial runs and a short break in the middle of the experiment.
 
-**DO NOT** modify the names of the files as the file names are hardcoded in each page's for navigation purposes.
+**DO NOT** modify the names of the files as the file names are hardcoded in each page for navigation purposes.
 
 ##### ACPToolKit.js
 
