@@ -75,6 +75,7 @@ Path: `experiment.html`.
 The experiment page is the most complicated of all. The screen is split into two sections, the left section contains the conditions of the experiment while the right section contains the text editor window and the windows containing text.
 
 **Left Section**
+
 The Technique, Granularity and Trial number will be displayed. In addition, you have to decide on the third independent variable that you want to test and modify/customize the code to suit your experiment design. Remember to update the UI to show the current value of the third independent variable for the current trial too!
 
 The words in the red box are called the stimuli. This is the target text that the participants has to enter into the Text Editor window using one of the two techniques. Please ensure that the participants do not manually type the text in!
@@ -83,7 +84,7 @@ The words in the red box are called the stimuli. This is the target text that th
 
 There are two kinds of windows in the right section: 1) Text Editor window and 2) Articles window. The Text Editor window is meant for participants to enter their response to the stimuli using either one of the proposed copy-pasting techniques. The Articles windows contain text in various forms (point-form / essay). The text corresponding to the stimuli will be highlighted in yellow for easy identification in the cases of the TRADITIONAL copy-pasting technique.
 
-When the AUTOCOMPASTE technique is active, typing three characters or more in the Text Editor will show a dropdown list of possible sentences that contain the characters/sentence that you have just entered, which are extracted from the contents of the open windows. Pressing the <kbd>↑</kbd>/<kbd>↓</kbd> buttons on the keyboard will scroll through the list of suggestions. Press <kbd>Enter</kbd> to select a suggestion and the text editor will display the full selected sentence.
+When the AUTOCOMPASTE technique is active, typing three characters or more in the Text Editor will show a dropdown list of possible sentences that contain the characters/sentence that you have just entered, which are extracted from the contents of the open windows. Pressing the <kbd>↑</kbd>/<kbd>↓</kbd> buttons on the keyboard will scroll through the list of suggestions. Press <kbd>enter</kbd> to select a suggestion and the text editor will display the full selected sentence.
 
 After selecting a sentence, pressing <kbd>←</kbd>/<kbd>→</kbd> button right after pressing enter, you can delete/append the next few sentences of the article to the Text Editor. Pressing <kbd>enter</kbd> or <kbd>space</kbd> would mean pasting the final text to the system.
 
