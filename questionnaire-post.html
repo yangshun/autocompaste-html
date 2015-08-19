@@ -1,0 +1,116 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>CS4249 Assignment 1</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Welcome</a></li>
+                        <li><a href="questionnaire-pre.html">Pre Questionnaire</a></li>
+                        <li><a href="instructions.html">Instructions</a></li>
+                        <li><a href="experiment.html">Experiment</a></li>
+                        <li class="active"><a href="questionnaire-post.html">Post Questionnaire</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h1>Post-Experiment Questionnaire</h1>
+                    <hr>
+                    <p>This part of the interface collects whatever post-experiment information. After the experiment, you want to collect more qualitative and quantitative feedback about the tested techniques. Some of the typical questions include, personal preferences, any difficulties participants experienced in the experiment, and areas of improvement. Please design a basic post-experimental questionnaire (no more than 10 questions).</p>
+
+                    <p>Current participant: <span class="js-pid pid"></span></p>
+
+                    <form id="post-expt-form">
+                        <div class="form-group">
+                            <label for="q1">Question 1 - Text</label>
+                            <input type="text" class="form-control" id="q1" name="q1" placeholder="Enter answer">
+                        </div>
+                        <div class="form-group">
+                            <label for="q2">Question 2 - Radio</label>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="q2" id="optionsRadios1" value="radio1">
+                                Radio response 1
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="q2" id="optionsRadios2" value="radio2">
+                                Radio response 2
+                              </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="q3">Question 3 - Checkbox</label>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="q3" value="checkbox1">
+                                Checkbox response 1
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="q3" value="checkbox2">
+                                Checkbox response 2
+                              </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="q4">Question 4 - Select Options</label>
+                            <select class="form-control" name="q4">
+                                <option value="option1">Option response 1</option>
+                                <option value="option2">Option response 2</option>
+                                <option value="option3">Option response 3</option>
+                                <option value="option4">Option response 4</option>
+                                <option value="option1">Option response 5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="q5">Question 5 - Textarea</label>
+                            <textarea class="form-control" id="q5" name="q5" placeholder="Enter response"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/DataStorage.js"></script>
+        <script src="js/ACPToolKit.js"></script>
+        <script src="js/main.js"></script>
+
+        <script>
+            $(function () {
+                $('#post-expt-form').submit(function (event) {
+                    event.preventDefault();
+                    var formResponses = $(this).serializeArray();
+                    // Do your own form validation here.
+                    ACPToolKit.downloadFormData(formResponses, 'post');
+                    ACPToolKit.clearAllData();
+                    alert('Thank you for your participation!');
+                });
+            });
+        </script>
+    </body>
+</html>

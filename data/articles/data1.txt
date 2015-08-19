@@ -1,0 +1,19 @@
+What is absorption? Loss or dissipation of energy as it travels through a medium. Example: radio waves lose some of their energy as they travel through that atmosphere. What about this... Hello there
+
+What is acceptor atoms? Trivalent atoms that accept free electrons from pentavalent atoms.
+
+What is AC coupling? Circuit that passes an AC signal while blocking a DC voltage.
+
+What is AC/DC? Equipment that will operate on either an AC or DC power source.
+
+What is AC generator? Device used to transform mechanical energy into AC electrical power.
+
+What is AC load line? A graph representing all possible combinations of AC output voltage and currentfor an amplifier.
+
+What is AC power supply? Power supply that delivers an AC voltage.
+
+What is active component? A component that changes the amplitude of a signal between input and output.
+
+What is active filter? A filter that uses an amplifier in addition to reactive components to pass or reject selected frequencies.
+
+What is active region? The region of BJT operation between saturation and cut off used for linear amplification.
