@@ -169,12 +169,13 @@ AutoComPaste.Interface = (function () {
 
       // Position the window randomly.
       //
-      // safety_bounds ensures that the window is at least some pixels within 
+      // safety_bounds ensure that the window is at least some pixels within 
       // the boundaries of the display.
-      var safety_bounds = 50;
+      var height_safety_bounds = privates.wm.getDisplayHeight()/1.5;
+      var width_safety_bounds = privates.wm.getDisplayWidth()/5;
       privates.wm.moveWindowTo(text_title,
-        Math.random() * (privates.wm.getDisplayWidth() - safety_bounds) + (safety_bounds / 2),
-        Math.random() * (privates.wm.getDisplayHeight() - safety_bounds) + (safety_bounds / 2)
+        Math.random() * (privates.wm.getDisplayWidth() - width_safety_bounds),
+        Math.random() * (privates.wm.getDisplayHeight() - height_safety_bounds)
       );
     };
 
