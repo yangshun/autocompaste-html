@@ -9,7 +9,6 @@ You can either download as a zip file or clone this repository to get it running
 
 1. **Download Zip:**
 
-
   Click on the **"Download Zip"** button on the right to download the repository as a zip file.
 
 2. **Clone the Repository:**
@@ -120,12 +119,12 @@ At the bottom of the page there is JavaScript coded written, to handle the user 
 
 Every page includes the library `ACPToolKit.js`, which provides some common utility functions that you will need for the experiment. `ACPToolKit.js` exposes the global variable `ACPToolKit` and has the following public functions:
 
-- `setCurrentParticipantId ( <String> id)`
+- `setCurrentParticipantId(id)`
 
 	**Description:**
 	Changes the current participant ID value, that is referenced across every screen.
 
-- `getCurrentParticipantId ()`
+- `getCurrentParticipantId()`
 
 	**Returns:** 
 	- `participant_id`: The current participant ID value.
@@ -134,11 +133,11 @@ Every page includes the library `ACPToolKit.js`, which provides some common util
 
 	 If the participant ID has not been set, the user will be prompted to enter a string value.
 	
-- `clearParticipantId ()`
+- `clearParticipantId()`
 	
 	Clears the `localStorage` of the `pid` value.
 
-- `downloadFormData (formResponses, type)`
+- `downloadFormData(formResponses, type)`
 
 	**Parameters:**	
 
@@ -151,7 +150,7 @@ Every page includes the library `ACPToolKit.js`, which provides some common util
 	from the array of objects passed in. The `name` keys of the objects will form the row 	of	headers and the `value` keys will form the row of values. This method is being used 	by the Pre-Experiment Questionnaire and Post-Experiment Questionnaire pages. A CSV file 	is generated that will be downloaded by the user's browser.
 	
 
-- `downloadTrialResults (data)`
+- `downloadTrialResults(data)`
 
 	**Parameters:**	
 
@@ -161,7 +160,7 @@ Every page includes the library `ACPToolKit.js`, which provides some common util
 	
 	This function takes in a two-dimensional array that represents the trial results and 	generates a CSV file out of it. The header row has to be the first array in the two-dimensional array.
 
-- `presentTrial (options)`
+- `presentTrial(options)`
 
 	**Parameters:**	
 
@@ -176,7 +175,7 @@ Every page includes the library `ACPToolKit.js`, which provides some common util
 	Upon invoking of this function, the experiment interface will be cleared and the Text Editor and Article windows will be showed. The number of windows being showed depends on the number of objects in the JSON file referenced by `data_file`. **Note:** This method is only available on the `experiment.html` page.
 	
 
-- `getCurrentTrialState ()`
+- `getCurrentTrialState()`
 
 	**Returns:**	
 
@@ -196,7 +195,6 @@ Every page includes the library `ACPToolKit.js`, which provides some common util
 
 	
 ##### Data Object File
-
 
 Paths to data object files are being passed into the `ACPToolKit.presentTrial()` method as one of the values. Each data object file has to have the following format, an array of objects with the keys `title` and `url`.
 
