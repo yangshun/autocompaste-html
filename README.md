@@ -3,7 +3,7 @@
 This repository consists of a basic experiment interface for conducting a copying and pasting experiment comparing two techniques: 1) AutoComPaste and 2) Traditional Copying and Pasting using keyboard shortcuts (Ctrl-C, Ctrl-V). You are to modify the code to suit your experimental design.
 
 
-### Installation
+## Installation
 
 You can either download as a zip file or clone this repository to get it running on your computer.
 
@@ -105,13 +105,13 @@ Please design a basic post-experimental questionnaire to help you to provide mor
 Upon clicking the Submit button, form responses on the page is serialized and CSV file containing the responses will be generated and available for downloading into the user's computer. The CSV file will be named `acp-<pid>-post.csv`.
 
 
-### Documentation
+## Documentation
 
 All interface files are saved as `.html` files in the root directory of the repository. The names of the files correspond to the respective screens.
 
 #### Page-specific Matters
 
-At the bottom of the page there is JavaScript coded written, to handle the user interactions and fetching of participant IDs. Most of the code is pretty trivial, except the script at the bottom of `experiment.html`. You will need to modify the code at the bottom of `experiment.html` to add in non-timed trial runs and a short break in the middle of the experiment.
+At the bottom of the page there is JavaScript code written, to handle the user interactions and fetching of participant IDs. Most of the code is pretty trivial, except the script at the bottom of `experiment.html`. You will need to modify the code at the bottom of `experiment.html` to add in non-timed trial runs and a short break in the middle of the experiment.
 
 **DO NOT** modify the names of the files as the file names are hardcoded in each page for navigation purposes.
 
@@ -215,7 +215,7 @@ Paths to data object files are being passed into the `ACPToolKit.presentTrial()`
 Each object in the array will be transformed into a window and displayed in the interface, with `title` corresponding to the window title and text content loaded from the file located at `url`. Refer to `data/texts.json` for an example of the data object file. Each article should be in the `.txt` format.
 
 
-### Credits
+## Credits
 
 - Tay Yang Shun (Interface and ACPToolKit)
 - Wong Yong Jie (AutoComPaste Engine)
