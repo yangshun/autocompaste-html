@@ -40,7 +40,7 @@ There are a total of 5 screens for experiment, each corresponding to a step of t
 4. Experiment
 5. Post-experiment Questionnaire
 
-##### Welcome Screen
+#### Welcome Screen
 
 Path: `index.html`.
 
@@ -49,7 +49,7 @@ The welcome interface of the experiment where basic instructions are provided to
 The participant ID entered here will be saved into HTML5 `localStorage` and the value is refereenced in other screens too. If other pages are visited and the participant ID has not been set, the user will be prompted to enter a value to be used as the participant ID.
 
 
-##### Pre-Experiment Questionnaire Screen
+#### Pre-Experiment Questionnaire Screen
 
 Path: `questionnaire-pre.html`.
 
@@ -61,13 +61,13 @@ You are free to add in even more types of form fields and/or change the layout t
 
 No validation has been added for the form fields. You have to ensure your participant fills in the required fields properly. Alternatively, you can add your own validation code.
 
-##### Instructions Screen
+#### Instructions Screen
 
 Path: `instructions.html`.
 
 This page will contain information regarding instructions on the experiment that you want your participant to read before they start on the experiment. Modify this page's HTML to add your own instructions. Diagrams and screenshots demonstrating how to go about doing the experiment will be very helpful!
 
-##### Instructions Screen
+#### Experiment Screen
 
 Path: `experiment.html`.
 
@@ -94,7 +94,7 @@ Please remember to give the user a few non-timed trial sessions to familiarize t
 After completing the experiment, the data containing the conditions and results of the trials will be generated in the form of a CSV file, `acp-<pid>-trials.csv`.
 
 
-##### Post-Experiment Questionnaire Screen
+#### Post-Experiment Questionnaire Screen
 
 Path: `questionnaire-post.html`.
 
@@ -109,13 +109,13 @@ Upon clicking the Submit button, form responses on the page is serialized and CS
 
 All interface files are saved as `.html` files in the root directory of the repository. The names of the files correspond to the respective screens.
 
-##### Page-specific Matters
+#### Page-specific Matters
 
 At the bottom of the page there is JavaScript coded written, to handle the user interactions and fetching of participant IDs. Most of the code is pretty trivial, except the script at the bottom of `experiment.html`. You will need to modify the code at the bottom of `experiment.html` to add in non-timed trial runs and a short break in the middle of the experiment.
 
 **DO NOT** modify the names of the files as the file names are hardcoded in each page for navigation purposes.
 
-##### ACPToolKit.js
+#### ACPToolKit.js
 
 Every page includes the library `ACPToolKit.js`, which provides some common utility functions that you will need for the experiment. `ACPToolKit.js` exposes the global variable `ACPToolKit` and has the following public functions:
 
@@ -194,7 +194,7 @@ Every page includes the library `ACPToolKit.js`, which provides some common util
 	Returns the state of the current trial. This method has to called to retrieve the current trial's state before the next `presentTrial()` is called or else the data will be overwritten. **Note:** This method is only available on the `experiment.html` page.
 
 	
-##### Data Object File
+#### Data Object File
 
 Paths to data object files are being passed into the `ACPToolKit.presentTrial()` method as one of the values. Each data object file has to have the following format, an array of objects with the keys `title` and `url`.
 
